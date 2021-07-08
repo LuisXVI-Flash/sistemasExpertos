@@ -1,13 +1,15 @@
 <?php
     
-    class Cargo_Trabajador extends conexion{
+    class Cargo_Usuario extends conexion{
         public function ECargo(){
             $this -> conectar();
         }
         public function obtenerPrivilegios($login){
             $conexion = Conexion::obtenerConexion();
-            $consulta = "SELECT C.idcargo_Trabajador, C.Tipo_Trabajador,T.nombres FROM cargo_trabajador C, trabajadores T 
-                         WHERE C.idcargo_Trabajador = T.idcargo_Trabajador and T.usuario = '$login'";
+            $consulta = "SELECT C.idcargo, C.cargo, U.nombre FROM cargo C, usuario U 
+                         WHERE C.idcargo = U.idcargo and U.dni = '$login'";
+                        
+                        //echo $consulta;exit;
 
             $resultado = mysqli_query($conexion,$consulta);
 

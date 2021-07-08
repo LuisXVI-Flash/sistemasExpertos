@@ -8,9 +8,9 @@
         $password=md5($_POST["password"]);
         $login=$_POST["login"];
         //comprobacion de trabajador
-include_once("./models/Trabajador.php");
-            $objUser = new Trabajador;
-            $respuesta = $objUser -> validarTrabajador($login,$password);
+include_once("./models/Usuario.php");
+            $objUser = new Usuario;
+            $respuesta = $objUser -> validarUsuario($login,$password);
             
             if($respuesta==0){
                 
@@ -18,9 +18,9 @@ include_once("./models/Trabajador.php");
                 $objMensaje = new formMensajeSistema;
                 $objMensaje -> formMensajeSistemaShow("No existe usuario con esos datos o esta deshabilitado","index.php");
             }else{
-                include_once("./models/Cargo_Trabajador.php");
+                include_once("./models/Cargo_Usuario.php");
                 abrir_sesion();
-                $objDetalle = new Cargo_Trabajador;
+                $objDetalle = new Cargo_Usuario;
                 $resultado = $objDetalle -> obtenerPrivilegios($login);
                 if($resultado == 1){
                     

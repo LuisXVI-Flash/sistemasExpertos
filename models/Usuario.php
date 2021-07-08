@@ -1,10 +1,10 @@
 <?php
     
-    class Trabajador extends conexion {
+    class Usuario extends conexion {
         
-        public function validarTrabajador($login,$password){
+        public function validarUsuario($login,$password){
             $conexion = Conexion::obtenerConexion();
-            $consulta = "SELECT usuario FROM trabajadores where usuario = '$login' AND contraseña= '$password' AND estado = 1";
+            $consulta = "SELECT dni FROM usuario where dni = '$login' AND password= '$password' AND estado = 1";
             
             $resultado = mysqli_query($conexion,$consulta);
             $aciertos = mysqli_num_rows($resultado);

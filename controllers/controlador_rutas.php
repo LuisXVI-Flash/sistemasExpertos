@@ -1,6 +1,6 @@
 <?php
 require_once("./models/Sesion.php");
-require_once("./models/Conexion.php");
+require_once("./models/conexion.php");
 if(isset($_GET["cerrar"])){
     session_destroy();
     header("Location: index.php");
@@ -33,7 +33,7 @@ if(isset($_SESSION["idcargo"])){
     }
     require_once("./view/layout/footer.php");
 }  else{
-    require_once("./controllers/controller_Trabajador.php");
+    require_once("./controllers/controller_Usuario.php");
 }
 
 ?>
