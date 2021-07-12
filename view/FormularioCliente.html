@@ -14,7 +14,7 @@
             <div class="container"> -->
                 <div class="btns-gestionar p-2">
                     <!-- <div class="nav flex-column nav-pills me-5" id="v-pills-tab" role="tablist"aria-orientation="vertical"> -->
-                        <form action="index.php?vista=cliente" method="POST" class="container_formulario">
+                        <form action="index.php?vista=paciente" method="POST" class="container_formulario">
                             <div>
                                 <label class="my-3" for="nombres">Nombres</label><br>
                                 <input class="input__form p-2" name="nombres" placeholder="Ingrese Nombre" id="nombres" type="text" required
@@ -28,22 +28,24 @@
                                     title="Debe contener letras de la a-z, mayúsculas o minúsculas">
                             </div>
                             <div>
-                                <label class="my-3" for="correo">Correo</label><br>
-                                <input class="input__form p-2" name="correo" placeholder="Correo" id="correo" type="email" required>
-                            </div>
-                            <div>
                                 <label class="my-3" for="dni">DNI</label><br>
                                 <input class="input__form p-2" name="dni" placeholder="DNI" id="dni" type="text" minlength="8" maxlength="8"
                                     name="dni" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
                                     required>
                             </div>
                             <div>
-                                <label class="my-3" for="celular">Celular</label><br>
-                                <input class="input__form p-2" name="celular" placeholder="Celular" id="celular" type="text" required
-                                    pattern="[0-9]{9}" title="Debe contener una cantidad de 9 números">
+                                <label class="my-3" for="dni">Password</label><br>
+                                <input class="input__form p-2" name="password" placeholder="Contraseña" id="password" type="text" 
+                                    name="password" 
+                                    required>
+                            </div>
+                            <div>
+                                <label class="my-3" for="edad">Edad</label><br>
+                                <input class="input__form p-2" name="edad" placeholder="Edad" id="edad" type="text" required
+                                    pattern="[0-9]{2}" title="Debe contener una edad correcta">
                             </div>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-center my-2"><br>
-                                <a class="btn btn-secondary" href="index.php?vista=cliente" >Regresar</a>
+                                <a class="btn btn-secondary" href="index.php?vista=paciente" >Regresar</a>
                                 <button type="submit" name="Agregar" class="btn btn-primary">Agregar</button>
                             </div>
                         </form>

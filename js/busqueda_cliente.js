@@ -1,7 +1,7 @@
 
-const buscarcliente = document.getElementById('btnbuscar_cliente')
-const mostrarCliente=()=>{
-    fetch("./controllers/controlador_busquedaclien.php")
+const buscarPaciente = document.getElementById('btnbuscar_cliente')
+const mostrarPaciente=()=>{
+    fetch("./controllers/controlador_busqueda_paciente.php")
     .then((res) => res.json())
     .then((data) => {
       // console.log(data);
@@ -32,14 +32,12 @@ const mostrarCliente=()=>{
         // creamos la tabla
 
         
-              $('#cliente_romel').DataTable({
+              $('#tabla_paciente').DataTable({
                 columns:[
-                  {data:"idcliente"},
-                  {data:"nombres"},
-                  {data:"apellidos"},
-                  {data:"correo"},
+                  {data:"nombre"},
+                  {data:"apellido"},
                   {data:"dni"},
-                  {data:"celular"},
+                  {data:"edad"},
 
                   {
                      data: null,
@@ -51,7 +49,7 @@ const mostrarCliente=()=>{
                 //     </td>
                 // </form>`,
                 render: function(data, type, row) {
-                    return `<form action="index.php?vista=cliente&id=${data["idcliente"]}"
+                    return `<form action="index.php?vista=paciente&id=${data["idusuario"]}"
                         method="POST">
                         <td class="content__btn">
                            <input type="submit" name="Editar" value="Editar" class="btn btn-primary btn-sm">
@@ -66,7 +64,7 @@ const mostrarCliente=()=>{
                     data: null,
                     className: "dt-center editor-delete",
                     render: function(data, type, row) {
-                        return `<form action="index.php?vista=cliente&id=${data["idcliente"]}"
+                        return `<form action="index.php?vista=paciente&id=${data["idusuario"]}"
                             method="POST">
                             <td class="content__btn">
                                <input type="submit" name="Eliminar" value="Eliminar" class="btn btn-secondary btn-sm">
@@ -91,4 +89,4 @@ const mostrarCliente=()=>{
     });
   }
   console.log("Hola")
-  mostrarCliente()
+  mostrarPaciente()

@@ -1,5 +1,5 @@
 <?php 
-require_once("./models/Cliente.php");
+require_once("./models/Usuario.php");
 require_once("./models/Conexion.php");
 require_once("./view/vista_principal.html");
 
@@ -11,17 +11,18 @@ if(isset($_POST["btngestionarr"]) or isset($_POST["verificar_usuario"] ) or isse
 }elseif(isset($_POST['Agregar'])){
     $nombres = $_POST['nombres'];
     $apellidos = $_POST['apellidos'];
-    $correo = $_POST['correo'];
     $dni = $_POST['dni'];
-    $celular = $_POST['celular'];
-    if($nombres!= null && $apellidos != null && $correo!=null && $dni!=null && $celular!=null){
+    $edad = $_POST['edad'];
+    $contrasenia=$_POST['password'];
+    $password = md5($contrasenia);
+    if($nombres!= null && $apellidos != null && $dni!=null && $edad!=null && $password !=NULL){
     
-        $cliente = new Cliente;
-        $cliente -> registrar_cliente($nombres, $apellidos, $correo, $dni, $celular);
+        $usuario = new Usuario;
+        $usuario -> registrar_paciente($nombres, $apellidos, $dni, $edad, $password);
         
         $_SESSION["estado"] = true;
-        $_SESSION["mensaje"] = "Cliente agregado correctamente";
-        header("Location: index.php?vista=cliente");
+        $_SESSION["mensaje"] = "Paciente agregado correctamente";
+        header("Location: index.php?vista=paciente");
     }    
 }
 else if (isset($_POST['Editar'])) {
@@ -61,9 +62,8 @@ else if (isset($_POST['Editar'])) {
         header("Location: index.php?vista=cliente");
         
     } else{
-    $array=listar_cliente();
 
-    require_once("./view/Formulario_listar_cliente.html");
+    require_once("./view/Formulario_listar_paciente.html");
 }
 
 
