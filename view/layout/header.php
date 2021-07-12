@@ -12,7 +12,7 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
-    <title>TECA PERU S.A.C</title>
+    <title>Sistemas Inteligentes</title>
     <!-- <script src='../js/bootstrap.min.js'></script> -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
@@ -36,7 +36,7 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
-    <script src="./js/busqueda_cliente.js"></script>
+    <script src="./js/busqueda_paciente.js"></script>
   </head>
   <body>
     <?php
@@ -48,7 +48,7 @@
           <li class="nav-item">
             <a
               href="index.php"
-              ><img src="./assets/teca-white.png" alt="logo-teca" width="120px" height="40px"></a>
+              ><img src="./assets/untels.png" alt="logo-teca" widht="80px" height="96px"></a>
           </li>>
           <li class="nav-item">
           <button class="btn_toggle" id="toggle"><i class="fas fa-bars" style="height: 50px;"></i></button>

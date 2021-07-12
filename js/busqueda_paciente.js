@@ -40,34 +40,13 @@ const mostrarPaciente=()=>{
                   {data:"edad"},
 
                   {
-                     data: null,
-                    className: "dt-center editor-delete",
-                //     defaultContent: `<form action="index.php?vista=cliente&id=${data["idcliente"]}"
-                //     method="POST">
-                //     <td class="content__btn">
-                //         <input type="submit" name="Eliminar" value="Editar" class="btn btn-primary btn-sm">
-                //     </td>
-                // </form>`,
-                render: function(data, type, row) {
-                    return `<form action="index.php?vista=paciente&id=${data["idusuario"]}"
-                        method="POST">
-                        <td class="content__btn">
-                           <input type="submit" name="Editar" value="Editar" class="btn btn-primary btn-sm">
-                        </td>
-                 </form>`;
-                  },
-
-                    orderable: false
-                  },
-
-                  {
                     data: null,
                     className: "dt-center editor-delete",
                     render: function(data, type, row) {
                         return `<form action="index.php?vista=paciente&id=${data["idusuario"]}"
                             method="POST">
                             <td class="content__btn">
-                               <input type="submit" name="Eliminar" value="Eliminar" class="btn btn-secondary btn-sm">
+                               <input type="submit" name="Diagnostico" value="Diagnostico" class="btn btn-secondary btn-sm">
                             </td>
                      </form>`;
                       },

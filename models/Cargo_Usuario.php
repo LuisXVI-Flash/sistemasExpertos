@@ -6,7 +6,7 @@
         }
         public function obtenerPrivilegios($login){
             $conexion = Conexion::obtenerConexion();
-            $consulta = "SELECT C.idcargo, C.cargo, U.nombre FROM cargo C, usuario U 
+            $consulta = "SELECT C.idcargo, C.cargo, U.nombre, U.idusuario FROM cargo C, usuario U 
                          WHERE C.idcargo = U.idcargo and U.dni = '$login'";
                         
                         //echo $consulta;exit;
@@ -19,6 +19,7 @@
                 $_SESSION['idcargo']=$row[0];
                 $_SESSION['nombreCargo']=$row[1];
                 $_SESSION['trabajador']=$row[2];
+                $_SESSION['idusuario']=$row[3];
                 return 1;
             }else{
                 return 0;

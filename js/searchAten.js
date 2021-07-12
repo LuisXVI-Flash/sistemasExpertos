@@ -6,9 +6,9 @@ window.addEventListener("load", () => {
   const mensaje = document.getElementById("mensaje");
   const selectAtendido=document.getElementById("selectAtendido");
 
-  const template=document.querySelector('#template-table-atendido').content;
+  const template=document.querySelector('#template-table-diagnosticos').content;
   const fragment=document.createDocumentFragment();
-  const mostrarAtendido=()=>{
+  const mostrarDiagnostico=()=>{
     fetch("./controllers/controlador_atendido.php")
     .then((res) => res.json())
     .then((data) => {
@@ -80,7 +80,7 @@ window.addEventListener("load", () => {
       }
     });
   }
-  mostrarAtendido()
+  mostrarDiagnostico()
   // buscador
 
   // filtro atendidos y no atendidos

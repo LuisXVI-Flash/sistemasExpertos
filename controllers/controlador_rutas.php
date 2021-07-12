@@ -11,28 +11,21 @@ if(isset($_SESSION["idcargo"])){
     
     if(isset($_GET["vista"])){
         if($_GET["vista"]=="paciente"){
-        require_once("./controllers/controlador_paciente.php");
-        
-    }elseif($_GET["vista"]=="agregapaciente"){
-        require_once("./controllers/controlador_dispositivo.php");
-    }elseif($_GET["vista"]=="atendidos"){
-        require_once("./view/vista_principal.html");
-        // require_once("./view/Listar_atendidos.html");
-        require_once("./controllers//controlador_estado.php");
-    }elseif($_GET["vista"]=="pedidos"){
-        require_once("./view/vista_principal.html");
-        require_once("./controllers/controlador_atendidos.php");
-    }elseif($_GET["vista"]=="atendidos2"){
-        require_once("./view/vista_principal.html");
-        require_once("./controllers/controlador_noatendidos.php");
+            require_once("./controllers/controlador_paciente.php");
+        }elseif($_GET["vista"]=="diagnosticos"){
+            require_once("./view/vista_principal.html");
+            require_once("./view/Listar_diagnostico.html");
+        }elseif($_GET["vista"]=="estadistico"){
+            require_once("./controllers/controlador_estadistico.php");
+        }else{
+            require_once("./view/vista_principal.html");
+        }
     }else{
         require_once("./view/vista_principal.html");
     }
-    }else{
-        require_once("./view/vista_principal.html");
-    }
+    
     require_once("./view/layout/footer.php");
-}  else{
+}else{
     require_once("./controllers/controller_Usuario.php");
 }
 

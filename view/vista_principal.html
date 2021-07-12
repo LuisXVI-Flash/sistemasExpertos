@@ -17,28 +17,36 @@
              <form method="POST" action="index.php?vista=paciente">
                 <button class="btn btn-link" name="btngestionarr" id="Listar">Agregar Paciente</button>
             </form>
+            <form method="POST" action="?vista=estadistico">
+                <button class="btn btn-link btn__sidebar" name="Listar" id="Listar">
+                <h6>
+                   Ver Estadístico
+                </h6>
+                </button>
+            </form>
             
         <?php }
         if($_SESSION['idcargo']==2){   
             ?>
-             <form method="POST" action="?vista=atendidos">
+            <a class="nav-link disabled" href="#">Opciones de paciente</a>
+             <form method="POST" action="?vista=diagnosticos">
                 <button class="btn btn-link btn__sidebar" name="Listar" id="Listar">
                 <h6>
-                    Solicitudes
+                    Ver diagnósticos
                 </h6>
                 </button>
             </form>
-             <form method="POST" action="?vista=pedidos">
+             <form method="POST" action="?vista=estadistico">
                 <button class="btn btn-link btn__sidebar" name="Listar" id="Listar">
                 <h6>
-                   Atendidos
+                   Ver Estadístico
                 </h6>
                 </button>
             </form>
              <form method="POST" action="?vista=atendidos2">
                 <button class="btn btn-link btn__sidebar" name="Listar" id="Listar">
                 <h6>
-                    No Atendidos
+                    Nuevo Diagnóstico
                 </h6>
                 </button>
             </form>
