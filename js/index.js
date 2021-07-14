@@ -122,6 +122,7 @@ class index { // Creación de la clase
                     l[10]+","+l[11]+","+l[12]+
                     "], C1, C2, C3, C4, C5, C6, C7, C8, C9)."
     );
+    alert(l);
     // Encontrar la respuesta
     session.answers(this.show(), 10000);
   }
@@ -130,6 +131,7 @@ class index { // Creación de la clase
     //Retorna una función callback
     return function (answer) {
       // Validando la respuesta
+      alert(answer);
       if (pl.type.is_substitution(answer)) {
         let puntuaciones = [0, 0, 0, 0, 0, 0, 0, 0, 0];
         // Obtener el valor de C1
@@ -186,51 +188,52 @@ class index { // Creación de la clase
 
           // Creación del elemento Ing. Ambiental
           let r1 = new resultado(
-              "<span class='carrera'> Ing.Ambiental </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
-                puntuaciones[0] + "</span>/100%"  //Asignar el porcentaje
+              "<form id='frmajax' method='POST'> <span class='carrera'> <input type='text' name='enfermedad' value='Covid' readonly style='border:0;'> </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
+                puntuaciones[0] + "</span>/100% </form>"  //Asignar el porcentaje
             ),
             // Creación del elemento Ing. Bioquímica
             r2 = new resultado(
-              "<span class='carrera'> Ing.Bioquímica </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
-                puntuaciones[1] + "</span>/100%" //Asignar el porcentaje
+              "<form id='frmajax' method='POST'><span class='carrera'><input type='text' name='enfermedad' value='Bronquitis' readonly style='border:0;'> </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
+                puntuaciones[1] + "</span>/100%</form>" //Asignar el porcentaje
             ),
             // Creación del elemento Ing. Civil
             r3 = new resultado(
-              "<span class='carrera'> Ing.Civil </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
-                puntuaciones[2] + "</span>/100%"  //Asignar el porcentaje
+              "<form id='frmajax' method='POST'><span class='carrera'><input type='text' name='enfermedad' value='Sinusitis' readonly style='border:0;'>  </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
+                puntuaciones[2] + "</span>/100%</form>"  //Asignar el porcentaje
             ),
             // Creación del elemento Ing. Electromecánica
             r4 = new resultado(
-              "<span class='carrera'> Ing.Mecánica </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
-                puntuaciones[3] + "</span>/100%"  //Asignar el porcentaje
+              "<form id='frmajax' method='POST'><span class='carrera'><input type='text' name='enfermedad' value='Asma' readonly style='border:0;'> </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
+                puntuaciones[3] + "</span>/100%</form>"  //Asignar el porcentaje
             ),
             // Creación del elemento Ing. en Gestión Empresarial
             r5 = new resultado(
-              "<span class='carrera'> Ing.Gestión</span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
-                puntuaciones[4] + "</span>/100%"  //Asignar el porcentaje
+              "<form id='frmajax' method='POST'><span class='carrera'><input type='text' name='enfermedad' value='Tuberculosis' readonly style='border:0;'> </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
+                puntuaciones[4] + "</span>/100%</form>"  //Asignar el porcentaje
             ),
             // Creación del elemento Ing. Industrial
             r6 = new resultado(
-              "<span class='carrera'> Ing.Industrial </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
-                puntuaciones[5] + "</span>/100%"  //Asignar el porcentaje
+              "<form id='frmajax' method='POST'><span class='carrera'><input type='text' name='enfermedad' value='Anemia' readonly style='border:0;'> </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
+                puntuaciones[5] + "</span>/100%</form>"  //Asignar el porcentaje
             ),
             // Creación del elemento Ing. Petrolera
             r7 = new resultado(
-              "<span class='carrera'> Ing.Petrolera </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
-                puntuaciones[6] + "</span>/100%"  //Asignar el porcentaje
+              "<form id='frmajax' method='POST'><span class='carrera'><input type='text' name='enfermedad' value='VIH' readonly style='border:0;'> </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
+                puntuaciones[6] + "</span>/100%</form>"  //Asignar el porcentaje
             ),
             // Creación del elemento Ing. en Sistemas Computacionales
             r8 = new resultado(
-              "<span class='carrera'> Ing.Sistemas </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
-                puntuaciones[7] + "</span>/100%" //Asignar el porcentaje
+              "<form id='frmajax' method='POST'><span class='carrera'><input type='text' name='enfermedad' value='Artritis' readonly style='border:0;'> </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
+                puntuaciones[7] + "</span>/100%</form>" //Asignar el porcentaje
             ),
             // Creación del elemento Ing. en Tecnologías de la Información y Comunicaciones
             r9 = new resultado(
-              "<span class='carrera'> Ing.Redes </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
-                puntuaciones[8] + "</span>/100%"  //Asignar el porcentaje
+              "<form id='frmajax' method='POST'><span class='carrera'><input type='text' name='enfermedad' value='Arritmia Cardiaca' readonly style='border:0;'> </span>:\nEl porcentaje que aplica a esta carrera es del: <span class='porcentaje'>" +
+                puntuaciones[8] + "</span>/100%</form>"  //Asignar el porcentaje
             ),
             // Recuperando del DOM el elemento "main"
             main = document.querySelector("main");
+            alert("hola");
 
           //Declaración de variables auxiliares
           let aux = 0,
@@ -256,6 +259,14 @@ class index { // Creación de la clase
           }
           //Añadiendo nuevos hijos al elemento "main" de mayor a menor
           main.appendChild(listaResult[8].elemento());
+          main.appendChild(listaResult[7].elemento());
+          main.appendChild(listaResult[6].elemento());
+          main.appendChild(listaResult[5].elemento());
+          main.appendChild(listaResult[4].elemento());
+          main.appendChild(listaResult[3].elemento());
+          main.appendChild(listaResult[2].elemento());
+          main.appendChild(listaResult[1].elemento());
+          main.appendChild(listaResult[0].elemento());
 
           const formulario = document.querySelector('#formGuardar');
           formulario.style.display = 'block';

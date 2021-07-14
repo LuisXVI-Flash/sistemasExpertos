@@ -2,417 +2,304 @@ class testVocacional { //Creación de la clase
     get program() {
         let program =
         // <--- HECHOS --->
-        // Ingenierias que oferta el ITSM
-        "ingenieria( ambiental)." +
-        "ingenieria( bioquimica)." +
-        "ingenieria( civil)." +
-        "ingenieria( electromecanica)." +
-        "ingenieria( gestion_empresarial)." +
-        "ingenieria( industrial)." +
-        "ingenieria( petrolera)." +
-        "ingenieria( sistemas_computacionales)." +
-        "ingenieria( tics)."+
+        // enfermedades
+        "enfermedad( covid)." +
+        "enfermedad( bronquitis)." +
+        "enfermedad( sinusitis)." +
+        "enfermedad( asma)." +
+        "enfermedad( tuberculosis)." +
+        "enfermedad( anemia)." +
+        "enfermedad( vih)." +
+        "enfermedad( artritis)." +
+        "enfermedad( arritmia)."+
 
-         //% Conjunto de habilidades requeridas en el perfil de ingreso y egreso de cada carrera %
-        //% El nivel de importancia de cada habilidad se mide de la siguiente manera ---> %
-        //% 1 = Poco o nada, 2 = Normal, 3 = Bastante o mucho %
-        //% 1.  ¿Se te da con facilidad resolver problemas de la vida cotidiana? %
-        "es_habilidad_de(resolver_problemas, ambiental, 2)." +
-        "es_habilidad_de(resolver_problemas, bioquimica, 1)." +
-        "es_habilidad_de(resolver_problemas, civil, 2)." +
-        "es_habilidad_de(resolver_problemas, electromecanica, 1)." +
-        "es_habilidad_de(resolver_problemas, gestion_empresarial, 2)." +
-        "es_habilidad_de(resolver_problemas, industrial, 2)." +
-        "es_habilidad_de(resolver_problemas, petrolera, 1)." +
-        "es_habilidad_de(resolver_problemas, sistemas_computacionales, 2)." +
-        "es_habilidad_de(resolver_problemas, tics, 2)." +
+         //% Conjunto de sintomas que se presentan en las enfermedades %
+        //% El nivel de intensidad de cada sintoma se mide de la siguiente manera ---> %
+        //% 1 = No presenta sintoma, 2 = baja o media, 3 = alta %
+		
+        //% 1.  ¿Si tiene fiebre, cuanto fue la temperatura que tenia la ultima vez que se la midio? %
+        "sintomas(fiebre, covid, 3)." +
+        "sintomas(fiebre, bronquitis, 1)." +
+        "sintomas(fiebre, sinusitis, 1)." +
+        "sintomas(fiebre, asma, 1)." +
+        "sintomas(fiebre, tuberculosis, 3)." +
+        "sintomas(fiebre, anemia, 1)." +
+        "sintomas(fiebre, vih, 2)." +
+        "sintomas(fiebre, artritis, 1)." +
+        "sintomas(fiebre, arritmia, 1)." +
 
-        //% 2. ¿Una de tus mayores virtudes es el razonamiento lógico-matemático? %
-        "es_habilidad_de(razonamiento_logico_matematico, ambiental, 1)." +
-        "es_habilidad_de(razonamiento_logico_matematico, bioquimica, 3)." +
-        "es_habilidad_de(razonamiento_logico_matematico, civil, 3)." +
-        "es_habilidad_de(razonamiento_logico_matematico, electromecanica, 3)." +
-        "es_habilidad_de(razonamiento_logico_matematico, gestion_empresarial, 1)."+
-        "es_habilidad_de(razonamiento_logico_matematico, industrial, 2)." +
-        "es_habilidad_de(razonamiento_logico_matematico, petrolera, 3)." +
-        "es_habilidad_de(razonamiento_logico_matematico, sistemas_computacionales, 3)."+
-        "es_habilidad_de(razonamiento_logico_matematico, tics, 3)."+
+        //% 2. ¿Que tipo de tos tiene? %
+        "sintomas(tos, covid, 3)." +
+        "sintomas(tos, bronquitis, 3)." +
+        "sintomas(tos, sinusitis, 2)." +
+        "sintomas(tos, asma, 3)." +
+        "sintomas(tos, tuberculosis, 1)." +
+        "sintomas(tos, anemia, 1)." +
+        "sintomas(tos, vih, 1)." +
+        "sintomas(tos, artritis, 1)." +
+        "sintomas(tos, arritmia, 1)." +
 
-        //% 3. ¿Disfrutas hacer experimentos y trabajo de laboratorio? %
-        "es_habilidad_de(trabajo_laboratorio, ambiental, 2)."+
-        "es_habilidad_de(trabajo_laboratorio, bioquimica, 3)."+
-        "es_habilidad_de(trabajo_laboratorio, civil, 1)."+
-        "es_habilidad_de(trabajo_laboratorio, electromecanica, 1)."+
-        "es_habilidad_de(trabajo_laboratorio, gestion_empresarial, 1)."+
-        "es_habilidad_de(trabajo_laboratorio, industrial, 1)."+
-        "es_habilidad_de(trabajo_laboratorio, petrolera, 2)."+
-        "es_habilidad_de(trabajo_laboratorio, sistemas_computacionales, 1)."+
-        "es_habilidad_de(trabajo_laboratorio, tics, 1)."+
+        //% 3. ¿Cual es el grado de dificultad al respirar? %
+        "sintomas(difrespirar, covid, 3)." +
+        "sintomas(difrespirar, bronquitis, 2)." +
+        "sintomas(difrespirar, sinusitis, 1)." +
+        "sintomas(difrespirar, asma, 3)." +
+        "sintomas(difrespirar, tuberculosis, 1)." +
+        "sintomas(difrespirar, anemia, 1)." +
+        "sintomas(difrespirar, vih, 1)." +
+        "sintomas(difrespirar, artritis, 1)." +
+        "sintomas(difrespirar, arritmia, 1)." +
 
-        //% 4. ¿Te sientes capacitado para contribuir a un mejor rendimiento de una empresa?  %
-        "es_habilidad_de(mejorar_rendimiento_empresarial, ambiental, 1)."+
-        "es_habilidad_de(mejorar_rendimiento_empresarial, bioquimica, 1)."+
-        "es_habilidad_de(mejorar_rendimiento_empresarial, civil, 1)."+
-        "es_habilidad_de(mejorar_rendimiento_empresarial, electromecanica, 2)."+
-        "es_habilidad_de(mejorar_rendimiento_empresarial, gestion_empresarial, 3)."+
-        "es_habilidad_de(mejorar_rendimiento_empresarial, industrial, 3)."+
-        "es_habilidad_de(mejorar_rendimiento_empresarial, petrolera, 1)."+
-        "es_habilidad_de(mejorar_rendimiento_empresarial, sistemas_computacionales, 1)."+
-        "es_habilidad_de(mejorar_rendimiento_empresarial, tics, 1)."+
+        //% 4. ¿Cuan cansado se siente?  %
+        "sintomas(cansancio, covid, 3)." +
+        "sintomas(cansancio, bronquitis, 3)." +
+        "sintomas(cansancio, sinusitis, 1)." +
+        "sintomas(cansancio, asma, 2)." +
+        "sintomas(cansancio, tuberculosis, 3)." +
+        "sintomas(cansancio, anemia, 3)." +
+        "sintomas(cansancio, vih, 1)." +
+        "sintomas(cansancio, artritis, 2)." +
+        "sintomas(cansancio, arritmia, 2)." +
 
-        //% 5. ¿Te mantienes al día de la nuevas tendencias tecnológicas? %
-        "es_habilidad_de(gusto_por_tendencias_tecnologicas, ambiental, 1)."+
-        "es_habilidad_de(gusto_por_tendencias_tecnologicas, bioquimica, 1)."+
-        "es_habilidad_de(gusto_por_tendencias_tecnologicas, civil, 1)."+
-        "es_habilidad_de(gusto_por_tendencias_tecnologicas, electromecanica, 2)."+
-        "es_habilidad_de(gusto_por_tendencias_tecnologicas, gestion_empresarial, 1)."+
-        "es_habilidad_de(gusto_por_tendencias_tecnologicas, industrial, 1)."+
-        "es_habilidad_de(gusto_por_tendencias_tecnologicas, petrolera, 1)."+
-        "es_habilidad_de(gusto_por_tendencias_tecnologicas, sistemas_computacionales, 3)."+
-        "es_habilidad_de(gusto_por_tendencias_tecnologicas, tics, 3)."+
+        //% 5. ¿De que color es la secresión nasal que percibe(mucosidad)? %
+        "sintomas(mucosidad, covid, 2)." +
+        "sintomas(mucosidad, bronquitis, 3)." +
+        "sintomas(mucosidad, sinusitis, 3)." +
+        "sintomas(mucosidad, asma, 1)." +
+        "sintomas(mucosidad, tuberculosis, 1)." +
+        "sintomas(mucosidad, anemia, 1)." +
+        "sintomas(mucosidad, vih, 1)." +
+        "sintomas(mucosidad, artritis, 1)." +
+        "sintomas(mucosidad, arritmia, 1)." +
 
-        //% 6. ¿Consideras que eres emprendedor? %
-        "es_habilidad_de(ser_emprendedor, ambiental, 2)."+
-        "es_habilidad_de(ser_emprendedor, bioquimica, 1)."+
-        "es_habilidad_de(ser_emprendedor, civil, 1)."+
-        "es_habilidad_de(ser_emprendedor, electromecanica, 1)."+
-        "es_habilidad_de(ser_emprendedor, gestion_empresarial, 3)."+
-        "es_habilidad_de(ser_emprendedor, industrial, 2)." +
-        "es_habilidad_de(ser_emprendedor, petrolera, 1)."+
-        "es_habilidad_de(ser_emprendedor, sistemas_computacionales, 1)."+
-        "es_habilidad_de(ser_emprendedor, tics, 1)."+
+        //% 6. ¿Cual es la frecuencia del dolor de cabeza? %
+        "sintomas(dolor_cabeza, covid, 2)." +
+        "sintomas(dolor_cabeza, bronquitis, 1)." +
+        "sintomas(dolor_cabeza, sinusitis, 3)." +
+        "sintomas(dolor_cabeza, asma, 1)." +
+        "sintomas(dolor_cabeza, tuberculosis, 1)." +
+        "sintomas(dolor_cabeza, anemia, 2)." +
+        "sintomas(dolor_cabeza, vih, 3)." +
+        "sintomas(dolor_cabeza, artritis, 1)." +
+        "sintomas(dolor_cabeza, arritmia, 1)." +
 
-        //% 7. ¿De qué nivel es tu conocimiento geográfico? %
-        "es_habilidad_de(conocimiento_geografico, ambiental, 2)."+
-        "es_habilidad_de(conocimiento_geografico, bioquimica, 1)."+
-        "es_habilidad_de(conocimiento_geografico, civil, 3)."+
-        "es_habilidad_de(conocimiento_geografico, electromecanica, 1)."+
-        "es_habilidad_de(conocimiento_geografico, gestion_empresarial, 1)."+
-        "es_habilidad_de(conocimiento_geografico, industrial, 1)."+
-        "es_habilidad_de(conocimiento_geografico, petrolera, 3)."+
-        "es_habilidad_de(conocimiento_geografico, sistemas_computacionales, 1)."+
-        "es_habilidad_de(conocimiento_geografico, tics, 1)."+
+        //% 7. ¿Cual es el grado del dolor de garganta? %
+        "sintomas(dolor_garganta, covid, 1)." +
+        "sintomas(dolor_garganta, bronquitis, 2)." +
+        "sintomas(dolor_garganta, sinusitis, 3)." +
+        "sintomas(dolor_garganta, asma, 2)." +
+        "sintomas(dolor_garganta, tuberculosis, 1)." +
+        "sintomas(dolor_garganta, anemia, 1)." +
+        "sintomas(dolor_garganta, vih, 1)." +
+        "sintomas(dolor_garganta, artritis, 1)." +
+        "sintomas(dolor_garganta, arritmia, 1)." +
 
-        //% 8. ¿Tienes liderazgo al trabajar en grupo? %
-        "es_habilidad_de(liderazgo, ambiental, 1)."+
-        "es_habilidad_de(liderazgo, bioquimica, 2)."+
-        "es_habilidad_de(liderazgo, civil, 1)."+
-        "es_habilidad_de(liderazgo, electromecanica, 1)."+
-        "es_habilidad_de(liderazgo, gestion_empresarial, 3)."+
-        "es_habilidad_de(liderazgo, industrial, 3)."+
-        "es_habilidad_de(liderazgo, petrolera, 1)."+
-        "es_habilidad_de(liderazgo, sistemas_computacionales, 1)."+
-        "es_habilidad_de(liderazgo, tics, 1)."+
+        //% 8. ¿Cual es el grado de rapidez de su perdida de la masa muscular? %
+        "sintomas(perdida_masa_muscular, covid, 1)." +
+        "sintomas(perdida_masa_muscular, bronquitis, 1)." +
+        "sintomas(perdida_masa_muscular, sinusitis, 1)." +
+        "sintomas(perdida_masa_muscular, asma, 1)." +
+        "sintomas(perdida_masa_muscular, tuberculosis, 3)." +
+        "sintomas(perdida_masa_muscular, anemia, 3)." +
+        "sintomas(perdida_masa_muscular, vih, 2)." +
+        "sintomas(perdida_masa_muscular, artritis, 2)." +
+        "sintomas(perdida_masa_muscular, arritmia, 1)." +
 
-        //% 9. ¿Tienes bases de programación o informática? %
-        "es_habilidad_de(saber_programar, ambiental, 1)."+
-        "es_habilidad_de(saber_programar, bioquimica, 1)."+
-        "es_habilidad_de(saber_programar, civil, 1)."+
-        "es_habilidad_de(saber_programar, electromecanica, 2)."+
-        "es_habilidad_de(saber_programar, gestion_empresarial, 1)."+
-        "es_habilidad_de(saber_programar, industrial, 1)."+
-        "es_habilidad_de(saber_programar, petrolera, 1)."+
-        "es_habilidad_de(saber_programar, sistemas_computacionales, 3)."+
-        "es_habilidad_de(saber_programar, tics, 3)."+
+        //% 9. ¿Cual es el grado de sudoración? %
+        "sintomas(sudoracion, covid, 2)." +
+        "sintomas(sudoracion, bronquitis, 1)." +
+        "sintomas(sudoracion, sinusitis, 1)." +
+        "sintomas(sudoracion, asma, 1)." +
+        "sintomas(sudoracion, tuberculosis, 3)." +
+        "sintomas(sudoracion, anemia, 1)." +
+        "sintomas(sudoracion, vih, 1)." +
+        "sintomas(sudoracion, artritis, 1)." +
+        "sintomas(sudoracion, arritmia, 2)." +
 
-        //% 10. ¿Te gustaría colaborar implantando y evaluando sistemas de producción? %
-        "es_habilidad_de(evaluar_sistemas_produccion, ambiental, 1)."+
-        "es_habilidad_de(evaluar_sistemas_produccion, bioquimica, 1)."+
-        "es_habilidad_de(evaluar_sistemas_produccion, civil, 1)."+
-        "es_habilidad_de(evaluar_sistemas_produccion, electromecanica, 1)."+
-        "es_habilidad_de(evaluar_sistemas_produccion, gestion_empresarial, 2)."+
-        "es_habilidad_de(evaluar_sistemas_produccion, industrial, 3)."+
-        "es_habilidad_de(evaluar_sistemas_produccion, petrolera, 1)."+
-        "es_habilidad_de(evaluar_sistemas_produccion, sistemas_computacionales, 1)."+
-        "es_habilidad_de(evaluar_sistemas_produccion, tics, 1)."+
+        //% 10. ¿Como se presenta el dolor de pecho? %
+        "sintomas(dolor_pecho, covid, 1)." +
+        "sintomas(dolor_pecho, bronquitis, 1)." +
+        "sintomas(dolor_pecho, sinusitis, 1)." +
+        "sintomas(dolor_pecho, asma, 3)." +
+        "sintomas(dolor_pecho, tuberculosis, 1)." +
+        "sintomas(dolor_pecho, anemia, 2)." +
+        "sintomas(dolor_pecho, vih, 1)." +
+        "sintomas(dolor_pecho, artritis, 1)." +
+        "sintomas(dolor_pecho, arritmia, 3)." +
 
-        //% 11. ¿Sientes interés por las electrónica y los componentes de las máquinas? %
-        "es_habilidad_de(conocimientos_electronicos_y_mecanicos, ambiental, 1)."+
-        "es_habilidad_de(conocimientos_electronicos_y_mecanicos, bioquimica, 1)."+
-        "es_habilidad_de(conocimientos_electronicos_y_mecanicos, civil, 2)."+
-        "es_habilidad_de(conocimientos_electronicos_y_mecanicos, electromecanica, 3)."+
-        "es_habilidad_de(conocimientos_electronicos_y_mecanicos, gestion_empresarial, 1)."+
-        "es_habilidad_de(conocimientos_electronicos_y_mecanicos, industrial, 1)."+
-        "es_habilidad_de(conocimientos_electronicos_y_mecanicos, petrolera, 1)."+
-        "es_habilidad_de(conocimientos_electronicos_y_mecanicos, sistemas_computacionales, 1)."+
-        "es_habilidad_de(conocimientos_electronicos_y_mecanicos, tics, 1)."+
+        //% 11. ¿Que tipo de mareo presenta? %
+        "sintomas(mareos, covid, 1)." +
+        "sintomas(mareos, bronquitis, 1)." +
+        "sintomas(mareos, sinusitis, 1)." +
+        "sintomas(mareos, asma, 1)." +
+        "sintomas(mareos, tuberculosis, 2)." +
+        "sintomas(mareos, anemia, 3)." +
+        "sintomas(mareos, vih, 2)." +
+        "sintomas(mareos, artritis, 1)." +
+        "sintomas(mareos, arritmia, 3)." +
 
-        //% 12. ¿Consideras que las energías renovables son el futuro? %
-        "es_habilidad_de(confiar_energias_renovables, ambiental, 3)."+
-        "es_habilidad_de(confiar_energias_renovables, bioquimica, 2)."+
-        "es_habilidad_de(confiar_energias_renovables, civil, 1)."+
-        "es_habilidad_de(confiar_energias_renovables, electromecanica, 1)."+
-        "es_habilidad_de(confiar_energias_renovables, gestion_empresarial, 2)."+
-        "es_habilidad_de(confiar_energias_renovables, industrial, 1)."+
-        "es_habilidad_de(confiar_energias_renovables, petrolera, 1)."+
-        "es_habilidad_de(confiar_energias_renovables, sistemas_computacionales, 1)."+
-        "es_habilidad_de(confiar_energias_renovables, tics, 1)."+
+        //% 12. ¿Cual es el grado del dolor que siente en los huesos? %
+        "sintomas(dolor_huesos, covid, 2)." +
+        "sintomas(dolor_huesos, bronquitis, 1)." +
+        "sintomas(dolor_huesos, sinusitis, 1)." +
+        "sintomas(dolor_huesos, asma, 1)." +
+        "sintomas(dolor_huesos, tuberculosis, 1)." +
+        "sintomas(dolor_huesos, anemia, 1)." +
+        "sintomas(dolor_huesos, vih, 3)." +
+        "sintomas(dolor_huesos, artritis, 3)." +
+        "sintomas(dolor_huesos, arritmia, 1)." +
 
-        //% 13. ¿Se te da bien el dibujo técnico? %
-        "es_habilidad_de(dibujo_tecnico, ambiental, 1)."+
-        "es_habilidad_de(dibujo_tecnico, bioquimica, 1)."+
-        "es_habilidad_de(dibujo_tecnico, civil, 3)."+
-        "es_habilidad_de(dibujo_tecnico, electromecanica, 2)."+
-        "es_habilidad_de(dibujo_tecnico, gestion_empresarial, 1)."+
-        "es_habilidad_de(dibujo_tecnico, industrial, 2)."+
-        "es_habilidad_de(dibujo_tecnico, petrolera, 1)."+
-        "es_habilidad_de(dibujo_tecnico, sistemas_computacionales, 1)."+
-        "es_habilidad_de(dibujo_tecnico, tics, 1)."+
+        //% 13. ¿Cuan inflamado tiene las articulaciones? %
+        "sintomas(articulacion, covid, 2)." +
+        "sintomas(articulacion, bronquitis, 1)." +
+        "sintomas(articulacion, sinusitis, 1)." +
+        "sintomas(articulacion, asma, 1)." +
+        "sintomas(articulacion, tuberculosis, 1)." +
+        "sintomas(articulacion, anemia, 1)." +
+        "sintomas(articulacion, vih, 2)." +
+        "sintomas(articulacion, artritis, 3)." +
+        "sintomas(articulacion, arritmia, 1)." +
 
-        //% 14. ¿Te interesa el estudio de los hidrocarburos? %
-        "es_habilidad_de(interes_hidrocarburos, ambiental, 1)."+
-        "es_habilidad_de(interes_hidrocarburos, bioquimica, 2)."+
-        "es_habilidad_de(interes_hidrocarburos, civil, 1)."+
-        "es_habilidad_de(interes_hidrocarburos, electromecanica, 1)."+
-        "es_habilidad_de(interes_hidrocarburos, gestion_empresarial, 1)."+
-        "es_habilidad_de(interes_hidrocarburos, industrial, 1)."+
-        "es_habilidad_de(interes_hidrocarburos, petrolera, 3)."+
-        "es_habilidad_de(interes_hidrocarburos, sistemas_computacionales, 1)."+
-        "es_habilidad_de(interes_hidrocarburos, tics, 1)."+
+        
 
-        //% 15. ¿Te importa la naturaleza y los animales? %
-        "es_habilidad_de(interes_naturaleza_animales, ambiental, 3)."+
-        "es_habilidad_de(interes_naturaleza_animales, bioquimica, 2)."+
-        "es_habilidad_de(interes_naturaleza_animales, civil, 1)."+
-        "es_habilidad_de(interes_naturaleza_animales, electromecanica, 1)."+
-        "es_habilidad_de(interes_naturaleza_animales, gestion_empresarial, 2)."+
-        "es_habilidad_de(interes_naturaleza_animales, industrial, 1)."+
-        "es_habilidad_de(interes_naturaleza_animales, petrolera, 1)."+
-        "es_habilidad_de(interes_naturaleza_animales, sistemas_computacionales, 1)."+
-        "es_habilidad_de(interes_naturaleza_animales, tics, 1)."+
-
-        //% 16. ¿Te gusta la exploración de campo? %
-        "es_habilidad_de(exploracion_de_campo, ambiental, 2)."+
-        "es_habilidad_de(exploracion_de_campo, bioquimica, 1)."+
-        "es_habilidad_de(exploracion_de_campo, civil, 3)."+
-        "es_habilidad_de(exploracion_de_campo, electromecanica, 1)."+
-        "es_habilidad_de(exploracion_de_campo, gestion_empresarial, 1)."+
-        "es_habilidad_de(exploracion_de_campo, industrial, 1)."+
-        "es_habilidad_de(exploracion_de_campo, petrolera, 3)."+
-        "es_habilidad_de(exploracion_de_campo, sistemas_computacionales, 1)."+
-        "es_habilidad_de(exploracion_de_campo, tics, 1)."+
-
-        //% 17. ¿Te interesa saber de qué está conformada la materia y los organismos? %
-        "es_habilidad_de(comprender_materia, ambiental, 2)."+
-        "es_habilidad_de(comprender_materia, bioquimica, 3)."+
-        "es_habilidad_de(comprender_materia, civil, 1)."+
-        "es_habilidad_de(comprender_materia, electromecanica, 1)."+
-        "es_habilidad_de(comprender_materia, gestion_empresarial, 1)."+
-        "es_habilidad_de(comprender_materia, industrial, 1)."+
-        "es_habilidad_de(comprender_materia, petrolera, 1)."+
-        "es_habilidad_de(comprender_materia, sistemas_computacionales, 1)."+
-        "es_habilidad_de(comprender_materia, tics, 1)."+
-
-        //% 18. ¿Quieres aprender los fundamentos físicos del electromagnetismo? %
-        "es_habilidad_de(entender_fisica, ambiental, 1)."+
-        "es_habilidad_de(entender_fisica, bioquimica, 1)."+
-        "es_habilidad_de(entender_fisica, civil, 1)."+
-        "es_habilidad_de(entender_fisica, electromecanica, 3)."+
-        "es_habilidad_de(entender_fisica, gestion_empresarial, 1)."+
-        "es_habilidad_de(entender_fisica, industrial, 1)."+
-        "es_habilidad_de(entender_fisica, petrolera, 2)."+
-        "es_habilidad_de(entender_fisica, sistemas_computacionales, 1)."+
-        "es_habilidad_de(entender_fisica, tics, 1)."+
-
-        //% 19. ¿Te gustaría saber cómo se desarrollan las aplicaciones que utilizas diariamente en tu celular, computadora u otro dispositvo? %
-        "es_habilidad_de(desarrollar_aplicaciones, ambiental, 1)."+
-        "es_habilidad_de(desarrollar_aplicaciones, bioquimica, 1)."+
-        "es_habilidad_de(desarrollar_aplicaciones, civil, 1)."+
-        "es_habilidad_de(desarrollar_aplicaciones, electromecanica, 1)."+
-        "es_habilidad_de(desarrollar_aplicaciones, gestion_empresarial, 1)."+
-        "es_habilidad_de(desarrollar_aplicaciones, industrial, 1)."+
-        "es_habilidad_de(desarrollar_aplicaciones, petrolera, 1)."+
-        "es_habilidad_de(desarrollar_aplicaciones, sistemas_computacionales, 3)."+
-        "es_habilidad_de(desarrollar_aplicaciones, tics, 2)."+
-
-        //% 20. ¿Quieres saber cómo funciona el mundo de las telecomunicaciones? %
-        "es_habilidad_de(interes_telecomunicaciones, ambiental, 1)."+
-        "es_habilidad_de(interes_telecomunicaciones, bioquimica, 1)."+
-        "es_habilidad_de(interes_telecomunicaciones, civil, 1)."+
-        "es_habilidad_de(interes_telecomunicaciones, electromecanica, 1)."+
-        "es_habilidad_de(interes_telecomunicaciones, gestion_empresarial, 1)."+
-        "es_habilidad_de(interes_telecomunicaciones, industrial, 1)."+
-        "es_habilidad_de(interes_telecomunicaciones, petrolera, 1)."+
-        "es_habilidad_de(interes_telecomunicaciones, sistemas_computacionales, 2)."+
-        "es_habilidad_de(interes_telecomunicaciones, tics, 3)."+
-
-        "evaluar_IA(X, Op, Ing, L, Ln) :- ingenieria( Ing), Ing = ambiental,"+
-                                        "es_habilidad_de(X, Ing, Op),"+
+        "evaluar_covid(X, Op, Enf, L, Ln) :- enfermedad( Enf), Enf = covid,"+
+                                        "sintomas(X, Enf, Op),"+
                                         "L = [C1,C2,C3,C4,C5,C6,C7,C8,C9|[]],"+
                                         "Aux is (C1+Op),"+
                                         "Ln = [Aux,C2,C3,C4,C5,C6,C7,C8,C9]."+
-        "evaluar_IGE(X, Op, Ing, L, Ln) :- ingenieria( Ing), Ing = gestion_empresarial,"+
-                                        "es_habilidad_de(X, Ing, Op),"+
+        "evaluar_bronquitis(X, Op, Enf, L, Ln) :- enfermedad( Enf), Enf = bronquitis,"+
+                                        "sintomas(X, Enf, Op),"+
                                         "L = [C1,C2,C3,C4,C5,C6,C7,C8,C9|[]],"+
                                         "Aux is (C5+Op),"+
                                         "Ln = [C1,C2,C3,C4,Aux,C6,C7,C8,C9]."+
 
-        "evaluar_II(X, Op, Ing, L, Ln) :- ingenieria(Ing), Ing = industrial,"+
-                                        "es_habilidad_de(X,Ing,Op),"+
+        "evaluar_sinusitis(X, Op, Enf, L, Ln) :- enfermedad(Enf), Enf = sinusitis,"+
+                                        "sintomas(X,Enf,Op),"+
                                         "L = [C1,C2,C3,C4,C5,C6,C7,C8,C9|[]],"+
                                         "Aux is (C6+Op),"+
                                         "Ln = [C1,C2,C3,C4,C5,Aux,C7,C8,C9]."+
 
-        "evaluar_IBQ(X, Op, Ing, L, Ln) :- ingenieria(Ing), Ing = bioquimica,"+
-                                        "es_habilidad_de(X,Ing,Op),"+
+        "evaluar_asma(X, Op, Enf, L, Ln) :- enfermedad(Enf), Enf = asma,"+
+                                        "sintomas(X,Enf,Op),"+
                                         "L = [C1,C2,C3,C4,C5,C6,C7,C8,C9|[]],"+
                                         "Aux is (C2+Op),"+
                                         "Ln = [C1,Aux,C3,C4,C5,C6,C7,C8,C9]."+
 
-        "evaluar_IC(X, Op, Ing, L, Ln) :- ingenieria(Ing), Ing = civil,"+
-                                        "es_habilidad_de(X,Ing,Op),"+
+        "evaluar_tuberculosis(X, Op, Enf, L, Ln) :- enfermedad(Enf), Enf = tuberculosis,"+
+                                        "sintomas(X,Enf,Op),"+
                                         "L = [C1,C2,C3,C4,C5,C6,C7,C8,C9|[]],"+
                                         "Aux is (C3+Op),"+
                                         "Ln = [C1,C2,Aux,C4,C5,C6,C7,C8,C9]."+
 
-        "evaluar_IE(X, Op, Ing, L, Ln) :- ingenieria(Ing), Ing = electromecanica,"+
-                                        "es_habilidad_de(X,Ing,Op),"+
+        "evaluar_anemia(X, Op, Enf, L, Ln) :- enfermedad(Enf), Enf = anemia,"+
+                                        "sintomas(X,Enf,Op),"+
                                         "L = [C1,C2,C3,C4,C5,C6,C7,C8,C9|[]],"+
                                         "Aux is (C4+Op),"+
                                         "Ln = [C1,C2,C3,Aux,C5,C6,C7,C8,C9]."+
 
-        "evaluar_IP(X, Op, Ing, L, Ln) :- ingenieria(Ing), Ing = petrolera,"+
-                                        "es_habilidad_de(X,Ing,Op),"+
+        "evaluar_vih(X, Op, Enf, L, Ln) :- enfermedad(Enf), Enf = vih,"+
+                                        "sintomas(X,Enf,Op),"+
                                         "L = [C1,C2,C3,C4,C5,C6,C7,C8,C9|[]],"+
                                         "Aux is (C7+Op),"+
                                         "Ln = [C1,C2,C3,C4,C5,C6,Aux,C8,C9]."+
 
-        "evaluar_ISC(X, Op, Ing, L, Ln) :- ingenieria(Ing), Ing = sistemas_computacionales,"+
-                                        "es_habilidad_de(X,Ing,Op),"+
+        "evaluar_artritis(X, Op, Enf, L, Ln) :- enfermedad(Enf), Enf = artritis,"+
+                                        "sintomas(X,Enf,Op),"+
                                         "L = [C1,C2,C3,C4,C5,C6,C7,C8,C9|[]],"+
                                         "Aux is (C8+Op),"+
                                         "Ln = [C1,C2,C3,C4,C5,C6,C7,Aux,C9]."+
 
-        "evaluar_ITICS(X, Op, Ing, L, Ln) :- ingenieria(Ing), Ing = tics,"+
-                                            "es_habilidad_de(X,Ing,Op),"+
+        "evaluar_arritmia(X, Op, Enf, L, Ln) :- enfermedad(Enf), Enf = arritmia,"+
+                                            "sintomas(X,Enf,Op),"+
                                             "L = [C1,C2,C3,C4,C5,C6,C7,C8,C9|[]],"+
                                             "Aux is (C9+Op),"+
                                             "Ln = [C1,C2,C3,C4,C5,C6,C7,C8,Aux]."+
 
-        "evaluar_pregunta1(X, Op, L, Ln) :- Op == 1, evaluar_IBQ(X, Op, bioquimica, L, L1), evaluar_IE(X, Op, electromecanica,L1, L2), evaluar_IP(X, Op, petrolera, L2, Ln);"+
-                                           "Op == 2, evaluar_IA(X, Op, ambiental,L, L1), evaluar_IC(X, Op, civil, L1, L2), evaluar_IGE(X, Op, gestion_empresarial, L2, L3), evaluar_II(X, Op, industrial, L3, L4), evaluar_ISC(X, Op, sistemas_computacionales, L4, L5),evaluar_ITICS(X, Op, tics, L5, Ln)."+
+        "evaluar_pregunta1(X, Op, L, Ln) :- Op == 1, evaluar_bronquitis(X, Op, bronquitis, L, L1), evaluar_sinusitis(X, Op, sinusitis,L1, L2), evaluar_asma(X, Op, asma, L2, L3), evaluar_anemia(X, Op, anemia, L3, L4), evaluar_artritis(X, Op, artritis, L4, L5), evaluar_arritmia(X, Op, arritmia, L5, Ln);"+
+                                           "Op == 2, evaluar_vih(X, Op, vih,L, Ln);"+
+										   "Op == 3, evaluar_covid(X, Op, covid, L, L1), evaluar_tuberculosis(X, Op, tuberculosis, L1, Ln)."+
+
+        "evaluar_pregunta2(X, Op, L, Ln) :-  Op == 1, evaluar_tuberculosis(X, Op, tuberculosis, L, L1), evaluar_anemia(X, Op, anemia,L1, L2), evaluar_vih(X, Op, vih, L2, L3), evaluar_artritis(X, Op, artritis, L3, L4), evaluar_arritmia(X, Op, arritmia, L4, L5);"+
+                                            "Op == 2, evaluar_sinusitis(X, Op, sinusitis, L, Ln);"+
+                                            "Op == 3, evaluar_bronquitis(X, Op, bronquitis, L, L1), evaluar_asma(X, Op, asma,L1, Ln)."+
+
+        "evaluar_pregunta3(X, Op, L, Ln) :- Op == 1, evaluar_tuberculosis(X, Op, tuberculosis, L, L1), evaluar_anemia(X, Op, anemia, L1, L2),  evaluar_sinusitis(X, Op, sinusitis, L2, L3), evaluar_artritis(X, Op, artritis, L3, L4), evaluar_arritmia(X, Op, arritmia, L4, L5), evaluar_vih(X, Op, vih, L5, Ln);"+
+                                           "Op == 2, evaluar_bronquitis(X, Op, bronquitis, L, Ln);"+
+                                           "Op == 3, evaluar_asma(X, Op, asma, L, L1), evaluar_covid(X, Op, covid, L1, Ln)."+
+
+        "evaluar_pregunta4(X, Op, L, Ln) :-  Op == 1, evaluar_sinusitis(X, Op, sinusitis, L, L1), evaluar_vih(X, Op, vih, L1, Ln);"+
+                                            "Op == 2, evaluar_asma(X, Op, asma, L, L1), evaluar_artritis(X, Op, artritis, L1, L2), evaluar_arritmia(X, Op, arritmia, L2, Ln);"+
+                                            "Op == 3, evaluar_bronquitis(X, Op, bronquitis, L, L1), evaluar_covid(X, Op, covid, L1, L2), evaluar_anemia(X, Op, anemia, L2, L3),evaluar_tuberculosis(X, Op, tuberculosis, L3, Ln)."+
+
+        "evaluar_pregunta5(X, Op, L, Ln) :- Op == 1, evaluar_asma(X, Op, asma, L, L1), evaluar_tuberculosis(X, Op, tuberculosis, L1, L2), evaluar_vih(X, Op, vih, L2, L3), evaluar_anemia(X, Op, anemia, L3, L4), evaluar_artritis(X, Op, artritis, L4, L5), evaluar_arritmia(X, Op, arritmia, L5, Ln);"+
+                                           "Op == 2, evaluar_covid(X, Op, covid, L, Ln);"+
+                                           "Op == 3, evaluar_bronquitis(X, Op, bronquitis, L, L1), evaluar_sinusitis(X, Op, sinusitis, L1, Ln)."+
+
+        "evaluar_pregunta6(X, Op, L, Ln) :-  Op == 1, evaluar_bronquitis(X, Op, bronquitis, L, L1), evaluar_tuberculosis(X, Op, tuberculosis, L1, L2), evaluar_asma(X, Op, asma, L2, L3), evaluar_artritis(X, Op, artritis, L3, L4), evaluar_arritmia(X, Op, arritmia, L4, Ln);"+
+                                            "Op == 2, evaluar_covid(X, Op, covid, L, L1), evaluar_anemia(X, Op, anemia, L1, Ln);"+
+                                            "Op == 3,  evaluar_sinusitis(X, Op, sinusitis, L, L1), evaluar_vih(X, Op, vih, L1, Ln)."+
+
+        "evaluar_pregunta7(X, Op, L, Ln) :- Op == 1, evaluar_anemia(X, Op, anemia, Ln, L1), evaluar_covid(X, Op, covid, L1, L2), evaluar_tuberculosis(X, Op, tuberculosis, L2, L3), evaluar_artritis(X, Op, artritis, L3, L4), evaluar_arritmia(X, Op, arritmia, L4, L5), evaluar_vih(X, Op, vih, L5, Ln);"+
+                                           "Op == 2, evaluar_bronquitis(X, Op, bronquitis, L, L1), evaluar_asma(X, Op, asma, L1, Ln);"+
+                                           "Op == 3, evaluar_sinusitis(X, Op, sinusitis, L, Ln)."+
+
+        "evaluar_pregunta8(X, Op, L, Ln) :-  Op == 1, evaluar_covid(X, Op, covid, L, L1), evaluar_bronquitis(X, Op, bronquitis, L1, L2), evaluar_sinusitis(X, Op, sinusitis, L2, L3), evaluar_asma(X, Op, asma, L3, L4), evaluar_arritmia(X, Op, arritmia, L4, Ln);"+
+                                            "Op == 2, evaluar_vih(X, Op, vih, L, L1), evaluar_artritis(X, Op, artritis, L1, Ln);"+
+                                            "Op == 3, evaluar_tuberculosis(X, Op, tuberculosis, L, L1), evaluar_anemia(X, Op, anemia, L1, Ln)."+
+
+        "evaluar_pregunta9(X, Op, L, Ln) :- Op == 1, evaluar_anemia(X, Op, anemia, L, L1), evaluar_asma(X, Op, asma, L1, L2), evaluar_artritis(X, Op, artritis, L2, L3), evaluar_bronquitis(X, Op, bronquitis, L3, L4), evaluar_sinusitis(X, Op, sinusitis, L4, L5), evaluar_vih(X, Op, vih, L5, Ln);"+
+                                           "Op == 2, evaluar_covid(X, Op, covid, L, L1), evaluar_arritmia(X, Op, arritmia, L1, Ln);"+
+                                           "Op == 3, evaluar_tuberculosis(X, Op, tuberculosis, L, Ln)."+
+
+         "evaluar_pregunta10(X, Op, L, Ln) :-  Op == 1, evaluar_covid(X, Op, covid, L, L1), evaluar_bronquitis(X, Op, bronquitis, L1, L2), evaluar_tuberculosis(X, Op, tuberculosis, L2, L3), evaluar_sinusitis(X, Op, sinusitis, L3, L4), evaluar_vih(X, Op, vih, L4, L5), evaluar_artritis(X, Op, artritis, L5, Ln);"+
+                                              "Op == 2, evaluar_anemia(X, Op, anemia, L, Ln);"+
+                                              "Op == 3, evaluar_asma(X, Op, asma, L, L1), evaluar_arritmia(X, Op, arritmia, L1, Ln)."+
+
+         "evaluar_pregunta11(X, Op, L, Ln) :- Op == 1, evaluar_covid(X, Op, covid, L, L1), evaluar_asma(X, Op, asma, L1, L2), evaluar_bronquitis(X, Op, bronquitis, L2, L3), evaluar_sinusitis(X, Op, sinusitis, L3, L4), evaluar_artritis(X, Op, artritis, L4, Ln);"+
+                                             "Op == 2, evaluar_tuberculosis(X, Op, tuberculosis, L, L1), evaluar_vih(X, Op, vih, L1, Ln);"+
+                                             "Op == 3, evaluar_anemia(X, Op, anemia, L, L1),evaluar_arritmia(X, Op, arritmia,L1,Ln)."+
 
 
-        "evaluar_pregunta2(X, Op, L, Ln) :-  Op == 1, evaluar_IA(X, Op, ambiental, L, L1), evaluar_IGE(X, Op, gestion_empresarial,L1, Ln);"+
-                                            "Op == 2, evaluar_II(X, Op, industrial, L, Ln);"+
-                                            "Op == 3, evaluar_IBQ(X, Op, bioquimica,L, L1), evaluar_IC(X, Op, civil, L1, L2), evaluar_IE(X, Op, electromecanica,L2, L3), evaluar_IP(X, Op, petrolera, L3, L4), evaluar_ISC(X, Op, sistemas_computacionales, L4, L5), evaluar_ITICS(X, Op, tics, L5, Ln)."+
+         "evaluar_pregunta12(X, Op, L, Ln) :-  Op == 1, evaluar_tuberculosis(X, Op, tuberculosis, L, L1), evaluar_anemia(X, Op, anemia, L1, L2), evaluar_sinusitis(X, Op, sinusitis, L2, L3), evaluar_asma(X, Op, asma, L3, L4), evaluar_bronquitis(X, Op, bronquitis, L4, L5), evaluar_arritmia(X, Op, arritmia, L5, Ln);"+
+                                              "Op == 2, evaluar_covid(X, Op, covid, L, L1);"+
+                                              "Op == 3, evaluar_vih(X, Op, vih, L, L1), evaluar_artritis(X, Op, artritis, L1, Ln)."+
 
-        "evaluar_pregunta3(X, Op, L, Ln) :- Op == 1, evaluar_IC(X, Op, civil, L, L1), evaluar_IE(X, Op, electromecanica, L1, L2), evaluar_IGE(X, Op, gestion_empresarial, L2, L3), evaluar_II(X, Op, industrial, L3, L4), evaluar_ISC(X, Op, sistemas_computacionales, L4, L5), evaluar_ITICS(X, Op, tics, L5, Ln);"+
-                                           "Op == 2, evaluar_IA(X, Op, ambiental, L, L1), evaluar_IP(X, Op, petrolera, L1, Ln);"+
-                                           "Op == 3, evaluar_IBQ(X, Op, bioquimica, L, Ln)."+
+         "evaluar_pregunta13(X, Op, L, Ln) :- Op == 1, evaluar_sinusitis(X, Op, sinusitis, L, L1), evaluar_asma(X, Op, asma, L1, L2), evaluar_bronquitis(X, Op, bronquitis,L2,L3), evaluar_tuberculosis(X, Op, tuberculosis, L3, L4), evaluar_anemia(X, Op, anemia, L4, L5), evaluar_arritmia(X, Op, arritmia,L5,Ln);"+
+                                             "Op == 2, evaluar_covid(X, Op, covid, L, L1), evaluar_vih(X,Op, vih, L1, Ln);"+
+                                             "Op == 3, evaluar_artritis(X,Op, artritis, L, Ln)."+
 
-        "evaluar_pregunta4(X, Op, L, Ln) :-  Op == 1, evaluar_IA(X, Op, ambiental, L, L1), evaluar_IBQ(X, Op, bioquimica, L1, L2), evaluar_IC(X, Op, civil, L2, L3), evaluar_IP(X, Op, petrolera, L3, L4), evaluar_ISC(X, Op, sistemas_computacionales, L4, L5), evaluar_ITICS(X, Op, tics, L5, Ln);"+
-                                            "Op == 2, evaluar_IE(X, Op, electromecanica, L, Ln);"+
-                                            "Op == 3, evaluar_IGE(X, Op, gestion_empresarial, L, L1), evaluar_II(X, Op, industrial, L1, Ln)."+
+   
 
-        "evaluar_pregunta5(X, Op, L, Ln) :- Op == 1, evaluar_IA(X, Op, ambiental, L, L1), evaluar_IBQ(X, Op, bioquimica, L1, L2), evaluar_IC(X, Op, civil, L2, L3), evaluar_IGE(X, Op, gestion_empresarial, L3, L4), evaluar_II(X, Op, industrial, L4, L5), evaluar_IP(X, Op, petrolera, L5, Ln);"+
-                                           "Op == 2, evaluar_IE(X, Op, electromecanica, L, Ln);"+
-                                           "Op == 3, evaluar_ISC(X, Op, sistemas_computacionales, L, L1), evaluar_ITICS(X, Op, tics, L1, Ln)."+
-
-        "evaluar_pregunta6(X, Op, L, Ln) :-  Op == 1, evaluar_IBQ(X, Op, bioquimica, L, L1), evaluar_IC(X, Op, civil, L1, L2), evaluar_IE(X, Op, electromecanica, L2, L3), evaluar_IP(X, Op, petrolera, L3, L4), evaluar_ISC(X, Op, sistemas_computacionales, L4, L5), evaluar_ITICS(X, Op, tics, L5, Ln);"+
-                                            "Op == 2, evaluar_IA(X, Op, ambiental, L, L1), evaluar_II(X, Op, industrial, L1, Ln);"+
-                                            "Op == 3, evaluar_IGE(X, Op, gestion_empresarial, L, Ln)."+
-
-        "evaluar_pregunta7(X, Op, L, Ln) :- Op == 1, evaluar_IBQ(X, Op, bioquimica, L, L1), evaluar_IE(X, Op, electromecanica, L1, L2), evaluar_IGE(X, Op, gestion_empresarial, L2, L3), evaluar_II(X, Op, industrial, L3, L4), evaluar_ISC(X, Op, sistemas_computacionales, L4, L5), evaluar_ITICS(X, Op, tics, L5, Ln);"+
-                                           "Op == 2, evaluar_IA(X, Op, ambiental, L, Ln);"+
-                                           "Op == 3, evaluar_IC(X, Op, civil, L, L1), evaluar_IP(X, Op, petrolera, L1, Ln)."+
-
-        "evaluar_pregunta8(X, Op, L, Ln) :-  Op == 1, evaluar_IA(X, Op, ambiental, L, L1), evaluar_IC(X, Op, civil, L1, L2), evaluar_IE(X, Op, electromecanica, L2, L3), evaluar_IP(X, Op, petrolera, L3, L4), evaluar_ISC(X, Op, sistemas_computacionales, L4, L5), evaluar_ITICS(X, Op, tics, L5, Ln);"+
-                                            "Op == 2, evaluar_IBQ(X, Op, bioquimica, L, Ln);"+
-                                            "Op == 3, evaluar_IGE(X, Op, gestion_empresarial, L, L1), evaluar_II(X, Op, industrial, L1, Ln)."+
-
-        "evaluar_pregunta9(X, Op, L, Ln) :- Op == 1, evaluar_IA(X, Op, ambiental, L, L1), evaluar_IBQ(X, Op, bioquimica, L1, L2), evaluar_IC(X, Op, civil, L2, L3), evaluar_IGE(X, Op, gestion_empresarial, L3, L4), evaluar_II(X, Op, industrial, L4, L5), evaluar_IP(X, Op, petrolera, L5, Ln);"+
-                                           "Op == 2, evaluar_IE(X, Op, electromecanica, L, Ln);"+
-                                           "Op == 3, evaluar_ISC(X, Op, sistemas_computacionales, L, L1), evaluar_ITICS(X, Op, tics, L1, Ln)."+
-
-         "evaluar_pregunta10(X, Op, L, Ln) :-  Op == 1, evaluar_IA(X, Op, ambiental, L, L1), evaluar_IBQ(X, Op, bioquimica, L1, L2), evaluar_IC(X, Op, civil, L2, L3), evaluar_IE(X, Op, electromecanica, L3, L4), evaluar_IP(X, Op, petrolera, L4, L5), evaluar_ISC(X, Op, sistemas_computacionales, L5, L6), evaluar_ITICS(X, Op, tics, L6, Ln);"+
-                                              "Op == 2, evaluar_IGE(X, Op, gestion_empresarial, L, Ln);"+
-                                              "Op == 3, evaluar_II(X, Op, industrial, L, Ln)."+
-
-         "evaluar_pregunta11(X, Op, L, Ln) :- Op == 1, evaluar_IA(X, Op, ambiental, L, L1), evaluar_IBQ(X, Op, bioquimica, L1, L2), evaluar_IGE(X, Op, gestion_empresarial, L2, L3), evaluar_II(X, Op, industrial, L3, L4), evaluar_IP(X, Op, petrolera, L4, L5), evaluar_ISC(X, Op, sistemas_computacionales, L5, L6), evaluar_ITICS(X, Op, tics, L6, Ln);"+
-                                             "Op == 2, evaluar_IC(X, Op, civil, L, Ln);"+
-                                             "Op == 3, evaluar_IE(X, Op, electromecanica, L, Ln)."+
-
-
-         "evaluar_pregunta12(X, Op, L, Ln) :-  Op == 1, evaluar_IC(X, Op, civil, L, L1), evaluar_IE(X, Op, electromecanica, L1, L2), evaluar_II(X, Op, industrial, L2, L3), evaluar_IP(X, Op, petrolera, L3, L4), evaluar_ISC(X, Op, sistemas_computacionales, L4, L5), evaluar_ITICS(X, Op, tics, L5, Ln);"+
-                                              "Op == 2, evaluar_IBQ(X, Op, bioquimica, L, L1), evaluar_IGE(X, Op, gestion_empresarial, L1, Ln);"+
-                                              "Op == 3, evaluar_IA(X, Op, ambiental, L, Ln)."+
-
-         "evaluar_pregunta13(X, Op, L, Ln) :- Op == 1, evaluar_IA(X, Op, ambiental, L, L1), evaluar_IBQ(X, Op, bioquimica, L1, L2), evaluar_IGE(X, Op, gestion_empresarial,L2,L3), evaluar_IP(X, Op, petrolera, L3, L4), evaluar_ISC(X, Op, sistemas_computacionales, L4, L5), evaluar_ITICS(X, Op, tics,L5,Ln);"+
-                                             "Op == 2, evaluar_IE(X, Op, electromecanica, L, L1), evaluar_II(X,Op, industrial, L1, Ln);"+
-                                             "Op == 3, evaluar_IC(X,Op, civil, L, Ln)."+
-
-         "evaluar_pregunta14(X, Op, L, Ln) :- Op == 1, evaluar_IA(X, Op, ambiental, L, L1), evaluar_IC(X, Op, civil, L1, L2), evaluar_IE(X, Op, electromecanica, L2, L3), evaluar_IGE(X, Op, gestion_empresarial, L3, L4), evaluar_II(X, Op, industrial, L4, L5), evaluar_ISC(X, Op, sistemas_computacionales, L5, L6), evaluar_ITICS(X, Op, tics, L6, Ln);"+
-                                             "Op == 2, evaluar_IBQ(X, Op, bioquimica, L, Ln);"+
-                                             "Op == 3, evaluar_IP(X, Op, petrolera, L, Ln)."+
-
-         "evaluar_pregunta15(X, Op, L, Ln) :- Op == 1, evaluar_IC(X, Op, civil, L, L1), evaluar_IE(X, Op, electromecanica, L1, L2), evaluar_II(X, Op, industrial, L2, L3), evaluar_IP(X, Op, petrolera, L3, L4), evaluar_ISC(X, Op, sistemas_computacionales, L4, L5), evaluar_ITICS(X, Op, tics, L5, Ln);"+
-                                             "Op == 2, evaluar_IBQ(X, Op, bioquimica, L, L1), evaluar_IGE(X, Op, gestion_empresarial, L1, Ln);"+
-                                             "Op == 3, evaluar_IA(X, Op, ambiental, L, Ln)."+
-
-          "evaluar_pregunta16(X, Op, L, Ln) :- Op == 1, evaluar_IBQ(X, Op, bioquimica, L, L1), evaluar_IE(X, Op, electromecanica, L1, L2), evaluar_IGE(X, Op, gestion_empresarial, L2, L3), evaluar_II(X, Op, industrial, L3, L4), evaluar_ISC(X, Op, sistemas_computacionales, L4, L5), evaluar_ITICS(X, Op, tics, L5, Ln);"+
-                                              "Op == 2, evaluar_IA(X, Op, ambiental, L, Ln);"+
-                                              "Op == 3, evaluar_IC(X, Op, civil, L, L1), evaluar_IP(X, Op, petrolera, L1, Ln)."+
-
-          "evaluar_pregunta17(X, Op, L, Ln) :- Op == 1, evaluar_IC(X, Op, civil, L, L1), evaluar_IE(X, Op, electromecanica, L1, L2), evaluar_IGE(X, Op, gestion_empresarial, L2, L3), evaluar_II(X, Op, industrial, L3, L4), evaluar_ISC(X, Op, sistemas_computacionales, L4, L5), evaluar_ITICS(X, Op, tics, L5, Ln);"+
-                                              "Op == 2, evaluar_IA(X, Op, ambiental, L, Ln);"+
-                                              "Op == 3, evaluar_IBQ(X, Op, bioquimica, L, Ln)."+
-
-         "evaluar_pregunta18(X, Op, L, Ln) :- Op == 1, evaluar_IA(X, Op, ambiental, L, L1), evaluar_IBQ(X, Op, bioquimica, L1, L2), evaluar_IC(X, Op, civil, L2, L3), evaluar_IGE(X, Op, gestion_empresarial,L3,L4), evaluar_II(X, Op, industrial, L4, L5), evaluar_ISC(X, Op, sistemas_computacionales, L5, L6), evaluar_ITICS(X, Op, tics,L6,Ln);"+
-                                             "Op == 2, evaluar_IP(X, Op, petrolera, L, Ln);"+
-                                             "Op == 3, evaluar_IE(X, Op, electromecanica, L, Ln)."+
-
-          "evaluar_pregunta19(X, Op, L, Ln) :- Op == 1, evaluar_IA(X, Op, ambiental, L, L1), evaluar_IBQ(X, Op, bioquimica, L1, L2), evaluar_IC(X, Op, civil, L2, L3), evaluar_IE(X, Op, electromecanica, L3,L4), evaluar_IGE(X, Op, gestion_empresarial, L4, L5), evaluar_II(X, Op, industrial, L5, L6), evaluar_IP(X, Op, petrolera, L6, Ln);"+
-                                              "Op == 2, evaluar_ITICS(X, Op, tics, L, Ln);"+
-                                              "Op == 3, evaluar_ISC(X, Op, sistemas_computacionales, L, Ln)."+
-
-          "evaluar_pregunta20(X, Op, L, Ln) :- Op == 1, evaluar_IA(X, Op, ambiental, L, L1), evaluar_IBQ(X, Op, bioquimica, L1, L2), evaluar_IC(X, Op, civil, L2, L3), evaluar_IE(X, Op, electromecanica, L3,L4), evaluar_IGE(X, Op, gestion_empresarial, L4, L5), evaluar_II(X, Op, industrial, L5, L6), evaluar_IP(X, Op, petrolera, L6, Ln);"+
-                                              "Op == 2, evaluar_ISC(X, Op, sistemas_computacionales, L, Ln);"+
-                                              "Op == 3, evaluar_ITICS(X, Op, tics, L, Ln)."+
-
-          "principal(ListaOp, C1, C2, C3, C4, C5, C6, C7, C8, C9) :- ListaOp = [Op1, Op2, Op3, Op4, Op5, Op6, Op7, Op8, Op9, Op10, Op11, Op12, Op13, Op14, Op15, Op16, Op17, Op18, Op19, Op20],"+
-                                                                    "X1 = resolver_problemas,"+
+          "principal(ListaOp, C1, C2, C3, C4, C5, C6, C7, C8, C9) :- ListaOp = [Op1, Op2, Op3, Op4, Op5, Op6, Op7, Op8, Op9, Op10, Op11, Op12, Op13],"+
+                                                                    "X1 = fiebre,"+
                                                                     "evaluar_pregunta1(X1, Op1, [0,0,0,0,0,0,0,0,0], L1),"+
-                                                                    "X2 = razonamiento_logico_matematico,"+
+                                                                    "X2 = tos,"+
                                                                     "evaluar_pregunta2(X2, Op2, L1, L2),"+
-                                                                    "X3=trabajo_laboratorio,"+
+                                                                    "X3=difrespirar,"+
                                                                     "evaluar_pregunta3(X3, Op3, L2, L3),"+
-                                                                    "X4=mejorar_rendimiento_empresarial,"+
+                                                                    "X4=cansancio,"+
                                                                     "evaluar_pregunta4(X4, Op4, L3, L4),"+
-                                                                    "X5=gusto_por_tendencias_tecnologicas,"+
+                                                                    "X5=mucosidad,"+
                                                                     "evaluar_pregunta5(X5, Op5, L4, L5),"+
-                                                                    "X6=ser_emprendedor,"+
+                                                                    "X6=dolor_cabeza,"+
                                                                     "evaluar_pregunta6(X6, Op6, L5, L6),"+
-                                                                    "X7=conocimiento_geografico,"+
+                                                                    "X7=dolor_garganta,"+
                                                                     "evaluar_pregunta7(X7, Op7, L6, L7),"+
-                                                                    "X8=liderazgo,"+
+                                                                    "X8=perdida_masa_muscular,"+
                                                                     "evaluar_pregunta8(X8, Op8, L7, L8),"+
-                                                                    "X9=saber_programar,"+
+                                                                    "X9=sudoracion,"+
                                                                     "evaluar_pregunta9(X9, Op9, L8, L9),"+
-                                                                    "X10=evaluar_sistemas_produccion,"+
+                                                                    "X10=dolor_pecho,"+
                                                                     "evaluar_pregunta10(X10, Op10, L9, L10),"+
-                                                                    "X11=conocimientos_electronicos_y_mecanicos,"+
+                                                                    "X11=mareos,"+
                                                                     "evaluar_pregunta11(X11, Op11, L10, L11),"+
-                                                                    "X12=confiar_energias_renovables,"+
+                                                                    "X12=dolor_huesos,"+
                                                                     "evaluar_pregunta12(X12, Op12, L11, L12),"+
-                                                                    "X13=dibujo_tecnico,"+
-                                                                    "evaluar_pregunta13(X13, Op13, L12, L13),"+
-                                                                    "X14=interes_hidrocarburos,"+
-                                                                    "evaluar_pregunta14(X14, Op14, L13, L14),"+
-                                                                    "X15=interes_naturaleza_animales,"+
-                                                                    "evaluar_pregunta15(X15, Op15, L14, L15),"+
-                                                                    "X16=exploracion_de_campo,"+
-                                                                    "evaluar_pregunta16(X16, Op16, L15, L16),"+
-                                                                    "X17=comprender_materia,"+
-                                                                    "evaluar_pregunta17(X17, Op17, L16, L17),"+
-                                                                    "X18=entender_fisica,"+
-                                                                    "evaluar_pregunta18(X18, Op18, L17, L18),"+
-                                                                    "X19=desarrollar_aplicaciones,"+
-                                                                    "evaluar_pregunta19(X19, Op19, L18, L19),"+
-                                                                    "X20=interes_telecomunicaciones,"+
-                                                                    "evaluar_pregunta20(X20, Op20, L19, L20),"+
-                                                                    "obtener_porcentajes(L20, LP),"+
+                                                                    "X13=articulacion,"+
+                                                                    "evaluar_pregunta13(X13, Op13, L12, L13)."+
+                                                                    "obtener_porcentajes(L13, LP),"+
                                                                     "LP = [C1,C2,C3,C4,C5,C6,C7,C8,C9]."+
+                                                                    
 
         "obtener_porcentajes(L, LP) :- L = [C1, C2, C3, C4, C5, C6, C7, C8,C9],"+
                                     "Total is 30,"+
@@ -426,6 +313,11 @@ class testVocacional { //Creación de la clase
                                     "X8 is ((C8/Total)*100),"+
                                     "X9 is ((C9/Total)*100),"+
                                     "LP = [X1,X2,X3,X4,X5,X6,X7,X8,X9].";
+
+
+
+
+                                    
 
         return program;
     }

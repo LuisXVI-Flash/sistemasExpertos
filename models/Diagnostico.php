@@ -51,6 +51,11 @@ class Diagnostico extends Conexion{
         }
         return $r;
     }
+    public function registrarDiagnostico($hoy,$enfermedad,$idusuario){
+        $instancia = Conexion::obtenerConexion();
+        $sql = "INSERT INTO diagnostico(fecha, enfermedad, idusuario) VALUES('$hoy', '$enfermedad', $idusuario)";
+        $resultado = mysqli_query($conexion,$sql);
+    }
 
 	
 }

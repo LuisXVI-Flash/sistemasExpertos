@@ -548,6 +548,18 @@ color: #fff;
 	border-radius: 12px;
 }
 
+#btnGuardar{
+	background-color: #b1e4ad;; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 12px;
+}
+
 #styleB{
 
 	text-align: center;
@@ -555,4 +567,9 @@ color: #fff;
 	height: 50px;
 	background-color: white;
 
+}
+
+.div_principal{
+  align-items: center;
+  margin-left: 10%;
 }
