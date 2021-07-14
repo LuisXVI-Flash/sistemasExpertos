@@ -1,0 +1,189 @@
+<div>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/resultado.js"></script>
+    <script type="text/javascript" src="../js/tau-prolog.js"></script>
+    <script type="text/javascript" src="../js/diagnostico_medico.js"></script>
+    awa de uwu
+    <main>
+        <div id="styleE">
+            <p id="inicio">Diagnostico de enfermedades</p>
+
+            <p id="indicacion">Seleccione las respuestas y después presione el <strong>boton de evaluar</strong>. <br>
+                <br>Responda atentamente y con seriedad para obtener un resultado fidedigno</p>
+        </div>
+        <div id=primeras>
+            <div id="p1" class="preguntas">
+                <p><strong> 1. ¿Si Tiene fiebre, cuanto fue la temperatura que tenia la ultima vez que se la midio?</p></strong>
+                <form name="FORMP1">
+                    <input type="radio" id="idP1R1" name="idP1" value="1">
+                    <label for="No">a) No tengo.</label><br>
+                    <input type="radio" id="idP1R2" name="idP1" value="2">
+                    <label for="No">b) Menos de 38°C.</label>
+                    <input type="radio" id="idP1R3" name="idP1" value="3">
+                    <label for="No">c) Más de 38°C</label>
+                </form>
+            </div>
+            <div id="p2" class="preguntas">
+                <strong>
+                    <p>2. ¿Que tipo de tos tiene?</p>
+                </strong>
+                <form name="FORMP2">
+                    <input type="radio" id="idP2R1" name="idP2" value="1">
+                    <label for="No">a) No tengo</label><br>
+                    <input type="radio" id="idP2R2" name="idP2" value="2">
+                    <label for="No">b) Tos seca</label><br>
+                    <input type="radio" id="idP2R3" name="idP2" value="3">
+                    <label for="No">c) Tos crónica</label>
+
+                </form>
+            </div>
+            <div id="p3" class="preguntas">
+                <p><strong>3. ¿Cual es el grado de dificultad al respirar?</strong></p>
+                <form name="FORMP3">
+                    <input type="radio" id="idP3R1" name="idP3" value="1">
+                    <label for="No">a) Respiro sin problemas</label><br>
+                    <input type="radio" id="idP3R2" name="idP3" value="2">
+                    <label for="No">b) Bajo</label><br>
+                    <input type="radio" id="idP3R3" name="idP3" value="3">
+                    <label for="No">c) Alto</label>
+                </form>
+            </div>
+            <div id="p4" class="preguntas">
+                <strong>
+                    <p>4. ¿Cuan cansado se siente?</p>
+                </strong>
+                <form name="FORMP4">
+                    <input type="radio" id="idP4R1" name="idP4" value="1">
+                    <label for="No">a) No me siento cansado</label><br>
+                    <input type="radio" id="idP4R2" name="idP4" value="2">
+                    <label for="No">b) Poco cansado</label><br>
+                    <input type="radio" id="idP4R3" name="idP4" value="3">
+                    <label for="No">c) Muy cansado</label>
+                </form>
+            </div>
+            <div id=p5 class="preguntas">
+                <strong>
+                    <p>5. ¿De que color es la secresión nasal que percibe(mucosidad)?</p>
+                </strong>
+                <form name="FORMP5">
+                    <input type="radio" id="idP5R1" name="idP5" value="1">
+                    <label for="No">a) No tengo segresión nasal</label><br>
+                    <input type="radio" id="idP5R2" name="idP5" value="2">
+                    <label for="No">b) Transparente</label><br>
+                    <input type="radio" id="idP5R3" name="idP5" value="3">
+                    <label for="No">c) Amarillo</label>
+                </form>
+            </div>
+            <div id="p6" class="preguntas">
+                <strong>
+                    <p>6. ¿Cual es la frecuencia del dolor de cabeza?</p>
+                </strong>
+                <form name="FORMP6">
+                    <input type="radio" id="idP6R1" name="idP6" value="1">
+                    <label for="No">a) No tengo dolor de cabeza</label><br>
+                    <input type="radio" id="idP6R2" name="idP6" value="2">
+                    <label for="No">b) De vez en cuando</label><br>
+                    <input type="radio" id="idP6R3" name="idP6" value="3">
+                    <label for="No">c) Constante</label>
+                </form>
+            </div>
+            <div id="p7" class="preguntas">
+                <strong>
+                    <p>7. ¿Cual es el grado del dolor de garganta?</p>
+                </strong>
+                <form name="FORMP7">
+                    <input type="radio" id="idP7R1" name="idP7" value="1">
+                    <label for="No">a) No tengo dolor de garganta</label><br>
+                    <input type="radio" id="idP7R2" name="idP7" value="2">
+                    <label for="No">b) Bajo</label><br>
+                    <input type="radio" id="idP7R3" name="idP7" value="3">
+                    <label for="No">c) Intenso</label>
+                </form>
+            </div>
+        </div>
+        <div id="segundas" class="preguntas">
+            <div id="p8" class="preguntas">
+                <strong>
+                    <p>8. ¿Cual es el grado de rapidez de su perdida de la masa muscular?</p>
+                </strong>
+                <form name="FORMP8">
+                    <input type="radio" id="idP8R1" name="idP8" value="1">
+                    <label for="No">a) No he perdido mi peso</label><br>
+                    <input type="radio" id="idP8R2" name="idP8" value="2">
+                    <label for="No">b) Lento</label><br>
+                    <input type="radio" id="idP8R3" name="idP8" value="3">
+                    <label for="No">c) Acelerado</label>
+                </form>
+            </div>
+            <div id="p9" class="preguntas">
+                <strong>
+                    <p>9. ¿Cual es el grado de sudoración?</p>
+                </strong>
+                <form name="FORMP9">
+                    <input type="radio" id="idP9R1" name="idP9" value="1">
+                    <label for="No">a) No tengo sudoración</label><br>
+                    <input type="radio" id="idP9R2" name="idP9" value="2">
+                    <label for="No">b) De vez en cuando</label><br>
+                    <input type="radio" id="idP9R3" name="idP9" value="3">
+                    <label for="No">c) Excesivo</label>
+                </form>
+            </div>
+            <div id="p10" class="preguntas">
+                <strong>
+                    <p>10. ¿Como se presenta el dolor de pecho?</p>
+                </strong>
+                <form name="FORMP10">
+                    <input type="radio" id="idP10R1" name="idP10" value="1">
+                    <label for="No">a) No tengo dolor de pecho</label><br>
+                    <input type="radio" id="idP10R2" name="idP10" value="2">
+                    <label for="No">b) Punzada intensa</label><br>
+                    <input type="radio" id="idP10R3" name="idP10" value="3">
+                    <label for="No">c) Opresión</label>
+                </form>
+            </div>        
+            <div id="p11" class="preguntas">
+                <strong>
+                    <p>11. ¿Que tipo de mareo presenta?</p>
+                </strong>
+                <form name="FORMP11">
+                    <input type="radio" id="idP11R1" name="idP11" value="1">
+                    <label for="No">a) No tengo mareos</label><br>
+                    <input type="radio" id="idP11R2" name="idP11" value="2">
+                    <label for="No">b) Desvanecimiento</label><br>
+                    <input type="radio" id="idP11R3" name="idP11" value="3">
+                    <label for="No">c)Vértigo</label>
+                </form>
+            </div>
+            <div id="p12" class="preguntas">
+                <strong>
+                    <p>12. ¿Cual es el grado del dolor que siente en los huesos?</p>
+                </strong>
+                <form name="FORMP12">
+                    <input type="radio" id="idP12R1" name="idP12" value="1">
+                    <label for="No">a) No tengo dolor en los huesos</label><br>
+                    <input type="radio" id="idP12R2" name="idP12" value="2">
+                    <label for="No">b) Bajo</label><br>
+                    <input type="radio" id="idP12R3" name="idP12" value="3">
+                    <label for="No">c) Intenso</label>
+                </form>
+            </div>
+            <div id="p13" class="preguntas">
+                <strong>
+                    <p>13. ¿Cuan inflamado tiene las articulaciones?</p>
+                </strong>
+                <form name="FORMP13">
+                    <input type="radio" id="idP13R1" name="idP13" value="1">
+                    <label for="No">a) No tengo inflamación</label><br>
+                    <input type="radio" id="idP13R2" name="idP13" value="2">
+                    <label for="No">b) Leve</label><br>
+                    <input type="radio" id="idP13R3" name="idP13" value="3">
+                    <label for="No">c) Significativo</label>
+                </form>
+            </div>
+        </div>
+        <div id="styleB">
+            <button type="button" id="btnEvaluar">Evaluar</button>
+            <button type="button" id="btnRecargar">Recargar</button>
+        </div>
+    </main>
+</div>

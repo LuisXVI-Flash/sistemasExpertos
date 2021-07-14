@@ -37,6 +37,15 @@
     crossorigin="anonymous"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
     <script src="./js/busqueda_paciente.js"></script>
+    <style>
+      .btn-link, .btn-link:hover, .btn-link:active, .btn-link:visited {
+       text-decoration:none;
+}
+.btn-primary , .btn-primary:active, .btn-primary:visited {
+      background:#5250F1;
+      border:none;
+}
+    </style>
   </head>
   <body>
     <?php

@@ -122,9 +122,9 @@ width: 250px;
 height: 90vh;
 transform: translate(0px);
 transition: transform 0.8s ease,display 0.3s ease;
-border: 1px solid #51AFDA;
+/*border: 1px solid #51AFDA;
 border-top-right-radius: 20px;
-border-bottom-right-radius: 20px;
+border-bottom-right-radius: 20px;*/
 transition: margin 0.3s ease;
 }
 
@@ -481,14 +481,16 @@ color: #fff;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid #006cbe;
+  
   border-radius: 5px;
   margin-left: 10px;
-  transition: background 0.3s ease, color 0.3s ease;
+  background: #7cc8ffd0;
+  color: #fff;
+  /*transition: background 0.3s ease, color 0.3s ease;*/
 }
 
 .card__atendido:hover{
-  background: #7cc8ffd0;
+  background: #5250F1;
   color: #fff;
   cursor: pointer;
 }
@@ -500,4 +502,57 @@ color: #fff;
 
 .container__title h4{
   margin-left: 50px;
+}
+
+.preguntas{
+	padding-left: 10px;
+	padding-top: 1px;
+	height: 150px;
+	width: 550px;
+
+}
+
+#primeras{
+	margin-top: 40px;
+	width: 550px;
+	height: 1400px;
+}
+
+#segundas{
+	width: 550px;
+	height: 1200px;
+	margin-top: -1406px;
+	margin-left: 600px;
+}
+
+#btnEvaluar{
+	background-color: #008CBA; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 12px;
+}
+#btnRecargar{
+	background-color: #f44336;; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 12px;
+}
+
+#styleB{
+
+	text-align: center;
+	width: 1160px;
+	height: 50px;
+	background-color: white;
+
 }
