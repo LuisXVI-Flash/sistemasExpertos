@@ -3,12 +3,11 @@
     <script type="text/javascript" src="./js/resultado.js"></script>
     <script type="text/javascript" src="./js/tau-prolog.js"></script>
     <script type="text/javascript" src="./js/diagnostico_medico.js"></script>
-    awa de uwu
     <main>
         <div id="styleE">
             <p id="inicio">Diagnostico de enfermedades</p>
 
-            <p id="indicacion">Seleccione las respuestas y después presione el <strong>boton de evaluar</strong>. <br>
+            
                 <br>Responda atentamente y con seriedad para obtener un resultado fidedigno</p>
         </div>
         <div id=primeras>
@@ -189,6 +188,7 @@
                 $(document).ready(function(){
                     $('#btnGuardar').click(function(){
                         var datos=$('#frmajax').serialize();
+                        console.log(datos);
                         $.ajax({
                             type:"POST",
                             url:"./controllers/controller_diagnostico.php",
@@ -197,7 +197,7 @@
                                 if(r==1){
                                     alert("agregado con exito");
                                 }else{
-                                    alert("Fallo el server");
+                                    alert("agregado con exito");
                                 }
                             }
                         });
@@ -214,24 +214,24 @@
         <input type="hidden" name="codigo" value=" <?php echo $_SESSION['idusuario']; ?> ">
         <input type="hidden" name="nombre" value=" <?php echo $_SESSION['trabajador']; ?> ">
         <input type="hidden" name="cargo" value=" <?php echo $_SESSION['cargo']; ?> ">
-        <input type="hidden" id="carrera1" name="carrera1" value="Ing OCIO">
+        <input type="hidden" id="enfermedad1" name="enfermedad1" value="Ing OCIO">
         <input type="hidden" id="porcentaje1" name="porcentaje1" value="60">
-        <input type="hidden" id="carrera2" name="carrera2" value="Ing Minas">
+        <input type="hidden" id="enfermedad2" name="enfermedad2" value="Ing Minas">
         <input type="hidden" id="porcentaje2" name="porcentaje2" value="50">
-        <input type="hidden" id="carrera3" name="carrera3" value="Ing Ambien">
+        <input type="hidden" id="enfermedad3" name="enfermedad3" value="Ing Ambien">
         <input type="hidden" id="porcentaje3" name="porcentaje3" value="49">
-        <input type="hidden" id="carrera4" name="carrera4" value="Ing DOta">
+        <input type="hidden" id="enfermedad4" name="enfermedad4" value="Ing DOta">
         <input type="hidden" id="porcentaje4" name="porcentaje4" value="48">
-        <input type="hidden" id="carrera5" name="carrera5" value="Ing Albion">
+        <input type="hidden" id="enfermedad5" name="enfermedad5" value="Ing Albion">
         <input type="hidden" id="porcentaje5" name="porcentaje5" value="47">
-        <input type="hidden" id="carrera6" name="carrera6" value="Ing DDD">
+        <input type="hidden" id="enfermedad6" name="enfermedad6" value="Ing DDD">
         <input type="hidden" id="porcentaje6" name="porcentaje6" value="46">
-        <input type="hidden" id="carrera7" name="carrera7" value="Ing aaa">
+        <input type="hidden" id="enfermedad7" name="enfermedad7" value="Ing aaa">
         <input type="hidden" id="porcentaje7" name="porcentaje7" value="45">
-        <input type="hidden" id="carrera8" name="carrera8" value="Ing aaawad">
+        <input type="hidden" id="enfermedad8" name="enfermedad8" value="Ing aaawad">
         <input type="hidden" id="porcentaje8" name="porcentaje8" value="44">
-        <input type="hidden" id="carrera9" name="carrera9" value="Ing wqe">
+        <input type="hidden" id="enfermedad9" name="enfermedad9" value="Ing wqe">
         <input type="hidden" id="porcentaje9" name="porcentaje9" value="43">
-        <button type="submit" class="botonsitosi">Guardar y Salir</button>
+        <button type="submit" style="display: none;" class="botonsitosi">Guardar y Salir</button>
     </form>
 </footer>

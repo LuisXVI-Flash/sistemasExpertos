@@ -526,7 +526,7 @@ color: #fff;
 }
 
 #btnEvaluar{
-	background-color: #008CBA; /* Green */
+	background-color: #095696ec; /* Green */
 	border: none;
 	color: white;
 	padding: 15px 32px;
@@ -534,10 +534,10 @@ color: #fff;
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
-	border-radius: 12px;
+	border-radius: 6px;
 }
 #btnRecargar{
-	background-color: #f44336;; /* Green */
+	background-color: #ec1809;; /* Green */
 	border: none;
 	color: white;
 	padding: 15px 32px;
@@ -545,11 +545,11 @@ color: #fff;
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
-	border-radius: 12px;
+	border-radius: 6px;
 }
 
 #btnGuardar{
-	background-color: #b1e4ad;; /* Green */
+	background-color: #48e73dc5;; /* Green */
 	border: none;
 	color: white;
 	padding: 15px 32px;
@@ -557,11 +557,11 @@ color: #fff;
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
-	border-radius: 12px;
+	border-radius: 6px;
 }
 
 #styleB{
-
+  margin-bottom: 5%;
 	text-align: center;
 	width: 1160px;
 	height: 50px;

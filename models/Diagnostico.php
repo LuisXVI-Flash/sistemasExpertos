@@ -54,7 +54,7 @@ class Diagnostico extends Conexion{
     public function registrarDiagnostico($hoy,$enfermedad,$idusuario){
         $instancia = Conexion::obtenerConexion();
         $sql = "INSERT INTO diagnostico(fecha, enfermedad, idusuario) VALUES('$hoy', '$enfermedad', $idusuario)";
-        $resultado = mysqli_query($conexion,$sql);
+        $resultado = mysqli_query($instancia,$sql);
     }
 
 	
