@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 08-07-2021 a las 03:28:12
+-- Tiempo de generación: 15-07-2021 a las 00:34:30
 -- Versión del servidor: 8.0.17
 -- Versión de PHP: 7.3.10
 
@@ -54,6 +54,24 @@ CREATE TABLE `diagnostico` (
   `idusuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Volcado de datos para la tabla `diagnostico`
+--
+
+INSERT INTO `diagnostico` (`iddiagnostico`, `fecha`, `enfermedad`, `idusuario`) VALUES
+(1, '2021-07-09', 'gripe', 2),
+(2, '2021-07-10', 'covid', 2),
+(3, '2021-07-11', 'TBC', 3),
+(4, '2021-07-07', 'gripe', 3),
+(6, '2021-07-14', 'Covid', 2),
+(107, '2021-07-14', 'Bronquitis', 2),
+(108, '2021-07-14', 'Bronquitis', 2),
+(110, '2021-07-14', 'Artritis', 2),
+(111, '2021-07-14', '', 2),
+(112, '2021-07-14', '', 2),
+(113, '2021-07-14', 'Artritis', 10),
+(114, '2021-07-14', 'Bronquitis', 10);
+
 -- --------------------------------------------------------
 
 --
@@ -77,7 +95,8 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`idusuario`, `nombre`, `apellido`, `dni`, `password`, `edad`, `estado`, `idcargo`) VALUES
 (1, 'Luis Angel', 'Izquierdo Rojas', 74810812, '21232f297a57a5a743894a0e4a801fc3', 21, 1, 1),
-(2, 'Janeth Rosario', 'HUamantinco Asis', 76543210, '21232f297a57a5a743894a0e4a801fc3', 21, 1, 2);
+(2, 'Juancito', 'Perez Diaz', 76543210, '21232f297a57a5a743894a0e4a801fc3', 21, 1, 2),
+(10, 'Raul', 'Huarote', 70123456, '21232f297a57a5a743894a0e4a801fc3', 40, 1, 2);
 
 --
 -- Índices para tablas volcadas
@@ -116,13 +135,13 @@ ALTER TABLE `cargo`
 -- AUTO_INCREMENT de la tabla `diagnostico`
 --
 ALTER TABLE `diagnostico`
-  MODIFY `iddiagnostico` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `iddiagnostico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
